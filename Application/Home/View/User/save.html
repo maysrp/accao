@@ -25,7 +25,7 @@
 				</tr>
 				<volist name="info" id="vo">
 					<tr id="{$vo['pid']}">
-						<td>{$vo['pid']|pidname}</td>
+						<td><a href="/Home/Index/post/pid/{$vo['pid']}" target="_blank">{$vo['pid']|pidname}</a></td>
 						<td>{$vo['time']|date="Y/m/d H:i",###}</td>
 						<td><span class="del_save glyphicon glyphicon-trash text-danger" value="{$vo['pid']}"></span></td>
 					</tr>
