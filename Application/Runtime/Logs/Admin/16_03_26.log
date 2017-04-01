@@ -1,0 +1,22 @@
+[ 2016-03-26T21:37:56+08:00 ] ::1 /Auth/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001634s ]
+NOTIC: [2] Missing argument 1 for getActionUrl(), called in D:\wamp\www\Auth\Application\Common\Controller\BaseController.class.php on line 8 and defined D:\wamp\www\Auth\Application\Common\Common\function.php 第 6 行.
+NOTIC: [8] Undefined variable: true D:\wamp\www\Auth\Application\Common\Common\function.php 第 7 行.
+NOTIC: [8] Undefined index: S_AUTHID D:\wamp\www\Auth\Application\Common\Controller\BaseController.class.php 第 14 行.
+
+[ 2016-03-26T21:37:56+08:00 ] ::1 /Auth/index.php?s=/Admin/Public/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000724s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001101s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001248s ]
+

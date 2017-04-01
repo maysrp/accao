@@ -1,0 +1,65 @@
+<div id="index" value="<php>echo index</php>">
+</div>
+<div class="row">
+	<div class="row">
+		<volist name="info" id="vo">
+		<div class="row post" value="{$vo['pid']}">
+			<div class="col-md-1 col-xs-1" >
+				<div  id="{$vo['pid']}" style="background: #5BB75B;width: 60px;height: 60px; ">
+					<a href="/Home/Index/post/pid/{$vo['pid']}">
+						<h3 class="text-right" style="color: #FFF"><b> {$vo['pid']|comment}</b></h3>
+						<h4 class="text-right" style="color: #FFF"> 评论</h4>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-11 col-xs-11" >
+				<h3 >
+					<if condition="$vo['is_video']">
+  						<span class="text-primary glyphicon glyphicon-film" title="视频"></span>
+  					<else/>
+  						<span class="glyphicon glyphicon-book" title="文章"></span>
+  					</if>
+					<a href="/Home/Index/post/pid/{$vo['pid']}">{$vo['title']}</a>
+				</h3>
+				<p>
+					<small class="text-muted">
+						发布时间:{$vo['time']|date="Y/m/d H:i",###}|
+						最后修改时间:
+						<if condition="$vo['edit_time']">
+							{$vo['edit_time']|date="Y/m/d H:i",###}
+						<else/>
+							{$vo['time']|date="Y/m/d H:i",###}
+						</if>
+						围观:{$vo['view']}
+						收藏:{$vo['pid']|savepid}
+						评论:{$vo['pid']|comment}
+					</small>
+				</p>
+				<div>
+				<if condition="$vo['image']">
+					<img  class="img-thumbnail" src="{$vo['image']}" width="500px;">
+				</if>
+				</div>
+			</div>
+		</div>
+		<hr>
+		</volist>
+	</div>
+</div>
+<div class="row addd">
+	<?php ad_1() ?>
+</div>
+<script type="text/javascript">
+	$(".post").mouseover(function(){
+		var pid=$(this).attr("value");
+		$("#"+pid).css("background","#0187C5");
+		$("#"+pid).animate({"margin-left":"-5px"},120);  
+	})
+	$(".post").mouseleave(function(){
+		var pid=$(this).attr("value");
+		$("#"+pid).css("background","#5BB75B");
+		$("#"+pid).animate({"margin-left":"5px"},100);
+
+	})
+
+</script>

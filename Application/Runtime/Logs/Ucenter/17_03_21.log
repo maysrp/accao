@@ -1,0 +1,363 @@
+[ 2017-03-21T16:31:57+08:00 ] 127.0.0.1 /ucenter//api/uc.php?code=a46a35q0mY1h7Dj2asKhe6gx9aVk2K3eZ8G0XE%2FK12g5eVq98na%2F%2FmjS3jGtl7Lgth25jlgBrMc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:32:05+08:00 ] 127.0.0.1 /ucenter//api/uc.php?code=c7b9nPcJlKWOdtbHDSopD7lkrP2GMcjC9l34XjJ5hi03SztOoES0L%2Bjr5a%2Fzf2PFSgK0C6PkfG0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000946s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001074s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:32:12+08:00 ] ::1 /ucenter//api/uc.php?code=e109yZRtor3nIm6fEe6c%2BIpVjVoUIUgvIY4678sWrjH4f147j%2FiTnIjjr4nhz99B8MzWn0X%2FuoQIVD3sz1SZaCHkRcYc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000989s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:32:12+08:00 ] ::1 /ucenter//api/uc.php?code=3e00O5P8Krow91cRrO%2FqIx5h1lHJB8wTEdAx1QiQwjUiaXBiv%2BXwYRiiPTNCG4jD9AaAUwnGPqEePFAyGERwazvMR7Hb
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001493s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:32:12+08:00 ] ::1 /ucenter//api/uc.php?code=6000WKmZM%2FekoIWBxJcoPRxaORje8YBqQjFZQV1P0f3JzxLFUYEj%2FjyncaPllEDSlCQ0vVdrwPQ2OyKXejY&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001010s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+NOTIC: [8] Undefined offset: 1 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined offset: 2 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: UC_API C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+
+[ 2017-03-21T16:32:13+08:00 ] ::1 /ucenter//api/uc.php?code=7992qxy4jwgOiPOWHKJE%2BM5C%2BJvevQmgY%2FgdBNqYyJzU%2BISwvTMjK68CrwOYtB4IlTw0vgVDJ720kO24iXc&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+NOTIC: [8] Undefined offset: 1 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined offset: 2 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: UC_API C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+
+[ 2017-03-21T16:53:32+08:00 ] ::1 /ucenter//api/uc.php?code=c2b6v48p1DI7JAkFs%2FKiwsx470OzCzPbJM%2BlV5cakqN8gqlGENeoTRB1VUntXs%2Bf7NW5RQ6ORfaJRJ%2B9z1c&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000730s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001031s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+NOTIC: [8] Undefined offset: 1 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined offset: 2 C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: type C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: name C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: url C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: ip C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: charset C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: synlogin C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: extra C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+NOTIC: [8] Undefined index: UC_API C:\Program\www\ucenter\Uc_client\lib\xml.class.php 第 69 行.
+
+[ 2017-03-21T16:53:34+08:00 ] 127.0.0.1 /ucenter//api/uc.php?code=9624kIJcpSGMB9OM%2Bb93Ad9GUNoxRfvd%2F0krfh853JDkK9X1aLZ6P89k9xGMy1xMHOIKJDM0TOc
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:53:35+08:00 ] ::1 /ucenter//api/uc.php?code=a2aeue3iRYSbav%2FxR1W2Qy963pY6%2F5VPTPofcaObZsP%2FJX24IubgTDwg3U14K27xHDfPyVwcYD0BggUuEaB31bhEnkq%2BUWsu&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:53:36+08:00 ] ::1 /ucenter//api/uc.php?code=ab60aL%2BtO5TsiE451pmA1eQc6Is88egTW5m%2FvTs%2BBKhj3a%2Fk4ZWJiHb2QKHSaJkqKOhw5fsbWzhxPSiYwA970Emj2FEQM38P&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:53:45+08:00 ] ::1 /ucenter//api/uc.php?code=323cGk6Zvkc0TLl1ioXZF9eMfnCE5zb%2Fb1M0Ey%2BvGKojpOkjc4nj8T4bM5bQcsAzWiNSfpWQcAAemClK%2F3b3WrLUMhj6bT%2BW&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001180s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:53:48+08:00 ] ::1 /ucenter//api/uc.php?code=d1a6FyhsDxOWdHT1S%2F9CNhSXznp9Gln6P6%2Fw%2B5oolkRDlZecWtCqEW0UbM4KxKR%2Fc2DDzA0fZezfVZCihlCt4RB73e9Lq4M8&__times__=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001105s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+
+[ 2017-03-21T16:53:48+08:00 ] 127.0.0.1 /ucenter//api/uc.php?code=e452Lh2b9M6tpTHvmTu2tI4BbTVcTas6kzuAGUVi4w8zCv%2BidOgBCfQEMEpC1SsRhd7JCgx1pGI
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+NOTIC: [8] Constant UC_CONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 2 行.
+NOTIC: [8] Constant UC_DBHOST already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 3 行.
+NOTIC: [8] Constant UC_DBUSER already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 4 行.
+NOTIC: [8] Constant UC_DBPW already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 5 行.
+NOTIC: [8] Constant UC_DBNAME already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 6 行.
+NOTIC: [8] Constant UC_DBCHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 7 行.
+NOTIC: [8] Constant UC_DBTABLEPRE already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 8 行.
+NOTIC: [8] Constant UC_DBCONNECT already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 9 行.
+NOTIC: [8] Constant UC_KEY already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 10 行.
+NOTIC: [8] Constant UC_API already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 11 行.
+NOTIC: [8] Constant UC_CHARSET already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 12 行.
+NOTIC: [8] Constant UC_IP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 13 行.
+NOTIC: [8] Constant UC_APPID already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 14 行.
+NOTIC: [8] Constant UC_PPP already defined C:\Program\www\ucenter\Application\Ucenter\Conf\config.php 第 15 行.
+NOTIC: [8192] Function set_magic_quotes_runtime() is deprecated C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 44 行.
+NOTIC: [2048] Only variables should be passed by reference C:\Program\www\ucenter\Application\Ucenter\Api\UcenterLib.class.php 第 64 行.
+

@@ -1,0 +1,56 @@
+
+
+<div class="row">
+	<div class="col-md-4 col-md-offset-4" style="border-radius: 10px;background-color: #AFAFAF;padding:10px;margin-top:200px; ">
+		<form method="post" action="">
+			<div class="row text-center">
+				<h3>用户注册</h3>
+			</div>
+			<input type="text" name="username" class="form-control username" style="margin: 5px;" placeholder="用户名">
+			<input type="password" name="password" class="form-control password" style="margin: 5px;" placeholder="密码">
+			<input type="password" name="password_2" class="form-control password_2" style="margin: 5px;" placeholder="重复密码">
+			<input type="email" name="email" class="form-control email" style="margin: 5px;" placeholder="邮箱">
+			<div class="row text-center">
+				<button class="btn btn-primary">注册</button>
+				<a href="/Home/User/login" class="btn btn-success">登入</a>
+			</div>	
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	$(".username").blur(function(){
+		var username=$(".username").val();
+		$.ajax({
+			url:"/Home/User/is_name/name/"+username,
+			success:function(data){
+				if(data.status){
+				}else{
+					$(".username").val("");
+					$(".username").attr("placeholder",data.con);
+				}
+			}
+		})
+	})
+	$(".email").blur(function(){
+		var email=$(".email").val();
+		$.ajax({
+			url:"/Home/User/is_email/email/"+email,
+			success:function(data){
+				if(data.status){
+				}else{
+					$(".email").val("");
+					$(".email").attr("placeholder",data.con);
+				}
+			}
+		})
+	})
+	$(".password_2").blur(function(){
+		var password_2=$(".password_2").val();
+		var password=$(".password").val();
+		if(password_2!=password){
+			$(".password_2").val("");
+			$(".password_2").attr("placeholder","两次密码不符合");
+		}
+	})
+
+</script>

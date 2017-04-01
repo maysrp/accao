@@ -1,0 +1,297 @@
+[ 2017-03-29T21:39:33+08:00 ] 127.0.0.1 /Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+
+[ 2017-03-29T21:39:36+08:00 ] 127.0.0.1 /Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034533s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000869s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2017-03-29T21:39:40+08:00 ] 127.0.0.1 /Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0310s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+SQL: SHOW COLUMNS FROM `think_group` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `think_group` WHERE `uid` = 4  [ RunTime:0.0281s ]
+SQL: SELECT * FROM `think_group` WHERE `uid` = 4  [ RunTime:0.0003s ]
+SQL: UPDATE `think_group` SET `uid`='4',`name`='管理组',`info`='[{\"time\":1490340069,\"ip\":\"127.0.0.1\"},{\"time\":1490342123,\"ip\":\"127.0.0.1\"},{\"time\":1490365890,\"ip\":\"127.0.0.1\"},{\"time\":1490367231,\"ip\":\"127.0.0.1\"},{\"time\":1490367374,\"ip\":\"127.0.0.1\"},{\"time\":1490409633,\"ip\":\"127.0.0.1\"},{\"time\":1490794780,\"ip\":\"127.0.0.1\"}]',`level`='3' WHERE `gid` = 1 [ RunTime:0.0884s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000637s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000900s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2017-03-29T21:39:41+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0108s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066384s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2017-03-29T21:39:42+08:00 ] 127.0.0.1 /Admin/Index/danmu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000839s ]
+SQL: SHOW COLUMNS FROM `think_danmu` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `think_danmu` ORDER BY id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 212 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0105s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0003s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081876s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2017-03-29T21:39:43+08:00 ] 127.0.0.1 /Admin/Index/mypost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0112s ]
+SQL: SELECT * FROM `think_post` WHERE `uid` = 4 AND `del` = 0 ORDER BY time desc  [ RunTime:0.0183s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000929s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000913s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000948s ]
+
+[ 2017-03-29T21:39:44+08:00 ] 127.0.0.1 /Admin/Index/all_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0227s ]
+SQL: SELECT * FROM `think_post` WHERE `del` = 0 ORDER BY time desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 153 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0114s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000698s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000857s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2017-03-29T21:39:46+08:00 ] 127.0.0.1 /Admin/Index/all_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0455s ]
+SQL: SELECT * FROM `think_post` WHERE `del` = 0 ORDER BY time desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 153 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0114s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044936s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000682s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000721s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2017-03-29T21:39:48+08:00 ] 127.0.0.1 /Admin/Index/check/pid/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0117s ]
+SQL: SELECT * FROM `think_post` WHERE `pid` = 7 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `think_post` SET `uid`='4',`title`='银魂',`post`='<p>银魂！！！！</p>',`time`='1490268253',`edit_time`='1490794756',`is_video`='1',`video_url`='http://ks.nyanya.tv/1.mp4',`is_show`='1',`image`='http://inory.net/images/2017/03/19/timthumb9.jpg',`ip`='127.0.0.1',`view`='70',`del`='0',`save`='0' WHERE `pid` = 7 [ RunTime:0.1281s ]
+SQL: SHOW COLUMNS FROM `think_userpoint` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `think_pointrule` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `think_pointrule` WHERE `rid` = 5 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_userpoint` WHERE `uid` = 4  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_pointmax` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `think_pointmax` WHERE `uid` = 4 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `think_pointmax` SET `point`='16' WHERE `uid` = 4 [ RunTime:0.0954s ]
+SQL: UPDATE `think_userpoint` SET `point`='12',`time`='1490794787',`history`='[{\"rid\":7,\"time\":1490786052,\"by\":\"system\"},{\"rid\":7,\"time\":1490786098,\"by\":\"system\"},{\"rid\":7,\"time\":1490786122,\"by\":\"system\"},{\"rid\":7,\"time\":1490786434,\"by\":\"system\"},{\"rid\":1,\"time\":1490786455,\"by\":\"system\"},{\"rid\":1,\"time\":1490786465,\"by\":\"system\"},{\"rid\":7,\"time\":1490788255,\"by\":\"system\"},{\"rid\":1,\"time\":1490788275,\"by\":\"system\"},{\"rid\":1,\"time\":1490788283,\"by\":\"system\"},{\"rid\":1,\"time\":1490794735,\"by\":\"system\"},{\"rid\":1,\"time\":1490794738,\"by\":\"system\"},{\"rid\":1,\"time\":1490794742,\"by\":\"system\"},{\"rid\":6,\"time\":1490794756,\"by\":\"system\"},{\"rid\":5,\"time\":1490794787,\"by\":\"system\"}]' WHERE `uid` = 4 [ RunTime:0.0667s ]
+SQL: SHOW COLUMNS FROM `think_pointhistory` [ RunTime:0.0532s ]
+SQL: INSERT INTO `think_pointhistory` (`history`) VALUES ('[{\"rid\":7,\"time\":1490786052,\"by\":\"system\"},{\"rid\":7,\"time\":1490786098,\"by\":\"system\"},{\"rid\":7,\"time\":1490786122,\"by\":\"system\"},{\"rid\":7,\"time\":1490786434,\"by\":\"system\"},{\"rid\":1,\"time\":1490786455,\"by\":\"system\"},{\"rid\":1,\"time\":1490786465,\"by\":\"system\"},{\"rid\":7,\"time\":1490788255,\"by\":\"system\"},{\"rid\":1,\"time\":1490788275,\"by\":\"system\"},{\"rid\":1,\"time\":1490788283,\"by\":\"system\"},{\"rid\":1,\"time\":1490794735,\"by\":\"system\"},{\"rid\":1,\"time\":1490794738,\"by\":\"system\"},{\"rid\":1,\"time\":1490794742,\"by\":\"system\"},{\"rid\":6,\"time\":1490794756,\"by\":\"system\"},{\"rid\":5,\"time\":1490794787,\"by\":\"system\"}]') [ RunTime:0.0774s ]
+
+[ 2017-03-29T23:02:58+08:00 ] 127.0.0.1 /Admin/Index/all_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000960s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001014s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0127s ]
+SQL: SELECT * FROM `think_post` WHERE `del` = 0 ORDER BY time desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 153 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0107s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001094s ]
+
+[ 2017-03-29T23:03:00+08:00 ] 127.0.0.1 /Admin/Index/mypost
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0640s ]
+SQL: SELECT * FROM `think_post` WHERE `uid` = 4 AND `del` = 0 ORDER BY time desc  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012244s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012302s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000893s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2017-03-29T23:03:02+08:00 ] 127.0.0.1 /Admin/Index/all_post
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000677s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000721s ]
+SQL: SHOW COLUMNS FROM `think_post` [ RunTime:0.0348s ]
+SQL: SELECT * FROM `think_post` WHERE `del` = 0 ORDER BY time desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: p C:\xampp\htdocs\Application\Admin\Controller\IndexController.class.php 第 153 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+SQL: SHOW COLUMNS FROM `think_uc` [ RunTime:0.0110s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\xampp\htdocs\Uc_client\lib\db.class.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044833s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000829s ]
+

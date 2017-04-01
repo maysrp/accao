@@ -1,0 +1,94 @@
+<link rel="stylesheet" type="text/css" href="/static/css/comment.css">
+<link rel="stylesheet" href="/plugins/em/lib/css/jquery.mCustomScrollbar.min.css"/>
+<link rel="stylesheet" href="/plugins/em/dist/css/jquery.emoji.css"/>
+<link rel="stylesheet" href="/plugins/em/lib/css/railscasts.css"/>
+<link rel="stylesheet" href="/plugins/em/dist/css/index.css"/>
+<script src="/plugins/em/lib/script/jquery.min.js"></script>
+<script src="/plugins/em/lib/script/highlight.pack.js"></script>
+<script src="/plugins/em/lib/script/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="/plugins/em/lib/script/jquery.mCustomScrollbar.min.js"></script>
+<script src="/plugins/em/dist/js/jquery.emoji.min.js"></script>
+<script src="/static/js/time.js"></script>
+	<div class="row">
+		<div class="row">
+			<div class="panel panel-default">
+  			<div class="panel-heading"><h4>评论管理</h4></div>
+  				<table class="table">
+  					<tr>
+  						<th>
+  							主题帖子
+  						</th>
+  						<th>
+  							楼层
+  						</th>
+  						<th>
+  							回复楼层
+  						</th>
+  						<th>
+  							内容
+  						</th>
+  						<th>
+  							时间
+  						</th>
+  						<th>
+  							用户
+  						</th>
+  						<th>
+  							操作
+  						</th>
+  					</tr>
+  					<volist name="info" id="vo">
+  						<tr id="{$vo['cid']}">
+  							<td><a href="/Admin/Index/post_comment/pid/{$vo['pid']}">{$vo['pid']|pidname}</a></td>
+  							<td>{$vo['lou']}</td>
+  							<td>{$vo['relou']}</td>
+  							<td class="comment">{$vo['comment']}</td>
+  							<td>{$vo['time']|date="Y/m/d H:i",###}</td>
+  							<td><a href="/Admin/Index/user_comment/uid/{$vo['uid']}">{$vo['uid']|uid}</a></td>
+  							<td>
+  								<span class="glyphicon glyphicon-trash text-danger del" value="{$vo['cid']}"></span>
+  							</td>
+
+
+
+  						</tr>
+
+
+
+  					</volist>
+  				</table>
+  				<div class="text-center">
+  					{$page}
+  				</div>
+  			</div>
+  			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		hljs.initHighlightingOnLoad();
+		$(".comment").emojiParse({
+            icons: [
+            {   path: "/plugins/em/dist/img/acfun/",
+                maxNum: 54,
+                file: ".gif",
+                placeholder: "#acfun_{alias}#"
+            }
+            ]
+        })
+        $(".del").click(function(){
+        	var cid=$(this).attr('value');
+        	$.ajax({
+        		url:'/Admin/Index/comment_del/cid/'+cid,
+        		success:function(data){
+        			if(data.status){
+        				//confirm("删除成功！");
+        				$("#"+cid).remove();
+        			}else{
+        				alert("删除失败！"+data.con);
+        			}
+        		}
+        	})
+        })
+
+	</script>

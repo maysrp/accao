@@ -1,0 +1,71 @@
+<div class="row" style="margin: 5px;">
+  <form>
+    <div class="input-group col-sm-6 col-sm-offset-6">
+      <input type="number" placeholder="帖子的pid" name="pid" class="form-control">
+      <div class="input-group-btn">
+        <button class="btn btn-primary">提交</button>
+      </div>
+    </div>
+  </form>
+</div>
+	<div class="row">
+		<div class="row">
+		<div class="panel panel-default">
+  		<div class="panel-heading"><h4>《{$Think.get.pid|pidname}》的弹幕管理</h4></div>
+			<table class="table">
+				<tr >
+					<th>
+						弹幕ID
+					</th>
+					<th>
+						视频
+					</th>
+					<th>
+						发布人
+					</th>
+					<th>
+						发布时间
+					</th>
+					<th>
+						内容
+					</th>
+					<th>
+						操作
+					</th>
+				</tr>
+				<volist name="info" id="vo">
+					<tr id="{$vo['id']}">
+						<td>{$vo['id']}</td>
+						<td>{$vo['pid']|pidname}</td>
+						<td><a href="/Admin/Index/user_danmu/uid/{$vo['uid']}">{$vo['uid']|uid}</a></td>
+						<td>{$vo['time']|date="Y/m/d H:i",###}</td>
+						<td>{$vo['danmu']|danmu}</td>
+						<td>
+							<span class="glyphicon glyphicon-trash text-danger delete" value="{$vo['id']}"></span>
+						</td>
+					</tr>
+				</volist>
+			</table>
+		</div>
+		</div>
+		<div class="row text-center">
+			{$page}
+		</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(".delete").click(function(){
+			var id=$(this).attr('value');
+			$.ajax({
+				url:"/Admin/Index/danmu_del/id/"+id,
+				success:function(data){
+					if(data.status){
+						$("#"+id).remove();
+					}else{
+						confrim("删除失败，未知原因！");
+					}
+				}
+			})
+		})
+		
+	</script>

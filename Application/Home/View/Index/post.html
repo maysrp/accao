@@ -1,0 +1,161 @@
+{__NOLAYOUT__} 
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/messenger/1.5.0/js/messenger.min.js"></script>
+	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger-theme-future.min.css" rel="stylesheet">
+	<title>{$post['title']}</title>
+</head>
+<body>
+
+<include file="Public/header"/>
+
+<div  class="container-fluid" style="background:#FAFAFA">
+<div class="container">
+<div class="col-md-10 col-md-offset-1">
+	<div class="row" style="margin-left:5px; ">
+		<h3>{$post['title']}</h3>
+		<h5 class="text-muted">
+			<span class="glyphicon glyphicon-user text-primary" title="发布时间"></span> {$post['uid']|uid}
+			| <span class="glyphicon glyphicon-time text-primary" title="发布时间"></span> {$post['time']|date="Y/m/d H:i",###} 
+			| <span class="glyphicon glyphicon-pencil text-primary" title="修改时间"></span>
+			<if condition="$vo['edit_time']">
+				{$post['edit_time']|date="Y/m/d H:i",###}
+			<else/>
+				{$post['time']|date="Y/m/d H:i",###}
+			</if>
+			| <span class="glyphicon glyphicon-eye-open text-primary" title="阅读量"></span> {$post['view']}
+			| <span class="glyphicon glyphicon-star text-success" title="收藏数"></span> {$post['pid']|savepid}
+		</h5>
+	</div>
+	<if condition="$post['is_video']">
+		<div class="css">
+			<link href="/plugins/danmu/css/scojs.css" rel="stylesheet">
+  			<link href="/plugins/danmu/css/colpick.css" rel="stylesheet">
+  			<link href="/plugins/danmu/css/bootstrap.css" rel="stylesheet">
+  			<link rel="stylesheet" href="/plugins/danmu/css/main.css">
+		</div>
+		<div id="danmu"></div>
+		<div class="js">
+			<script src="/plugins/danmu/js/jquery-2.1.4.min.js"></script>
+			<script src="/plugins/danmu/js/jquery.shCircleLoader.js"></script>
+			<script src="/plugins/danmu/js/sco.tooltip.js"></script>
+			<script src="/plugins/danmu/js/colpick.js"></script>
+			<script src="/plugins/danmu/js/jquery.danmu.js"></script>
+			<script src="/plugins/danmu/js/main.js"></script>
+		</div>
+		<script type="text/javascript">
+			$("#danmu").DanmuPlayer({
+    			src:"{$post['video_url']}",
+    			height: "480px", //区域的高度
+    			width: "800px" //区域的宽度
+    			,urlToGetDanmu:"/Home/Danmu/index/pid/{$post['pid']}"
+   				,urlToPostDanmu:"/Home/Danmu/send/pid/{$post['pid']}"
+  			});
+  			$("video").attr('poster',"{$post['image']}");
+		</script>
+<script type="text/javascript">  			
+function exitFullscreen() {
+  if(document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if(document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if(document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+ $(".full-screen").attr("onclick","launchFullScreen(document.documentElement)");
+}
+function launchFullScreen(element) { 
+ if(element.requestFullscreen) { 
+  element.requestFullscreen(); 
+ } else if(element.mozRequestFullScreen) { 
+  element.mozRequestFullScreen(); 
+ } else if(element.webkitRequestFullscreen) { 
+  element.webkitRequestFullscreen(); 
+ } else if(element.msRequestFullscreen) { 
+  element.msRequestFullscreen(); 
+ } 
+ $(".full-screen").attr("onclick","exitFullscreen()")
+} 
+		</script>
+		<if condition="$Think.session.user.uid eq NULL"> 
+			<script type="text/javascript">
+				$(".danmu-input").attr('placeholder','登入后才能发送弹幕！');
+				$(".danmu-input").attr('readonly','readonly');
+				$(".send-btn").html("<a class=\"text-danger\" href=\"/Home/User/login\">请先登入</a>");
+			</script>
+		<else/>
+		</if>
+	<else/>
+		<div class="row">
+			<div class="row">
+				<if condition="$post['image']">
+					<img src="{$post['image']}" width="400px;">
+				</if>
+			</div>
+			<div class="row">
+				{$post['post']}
+			</div>
+			<div class="row">
+			<hr/>
+			</div>
+		</div>
+	</if>
+	<div class="row">
+		<hr>
+		<div class="col-md-6">
+			<div class="btn btn-danger save" style="background:#FD4C4C;">收藏 <span class="glyphicon glyphicon-star text-center" ></span></div> 
+		</div>
+		<div class="col-md-6" >
+			<img src="/Home/User/avatar/uid/{$post['uid']}/type/small" class="img-circle"/> <span> {$post['uid']|uid}</span> <a href="">关注</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="container-fluid" style="background:#FFF">
+	<div class="container" >
+		<include file="Index/comment"/>	
+	</div>
+</div>
+
+<div class="container-fluid" style="background:#F3F3F3">
+	<div class="container">
+		<div class="row addd">
+			<?php ad_2() ?>
+		</div>
+	</div>
+</div>
+</body>
+
+<script type="text/javascript">
+	$(".save").click(function(){
+		$.ajax({
+			url:'/Home/Save/click/pid/{$post['pid']}',
+			success:function(data){
+				if(data.status){
+					mx=Messenger().post(data.con);
+				}else{
+					mx=Messenger().post("添加失败:"+data.con);
+				}
+			}
+		})
+	})
+
+
+
+
+
+
+
+
+</script>
+</html>
