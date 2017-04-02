@@ -20,6 +20,13 @@ class IndexController extends Controller {
 		echo '已生成Sitemap网站地图到根目录';
     }
     public function index(){
+        $type=I('get.type');
+        if($type=="video"){
+            $where['is_video']=1;
+        }elseif ($type=="post") {
+           $where['is_video']=0;
+        }else{
+        }
         $where['del']=0;
         $where['is_show']=1;
         $info=M('Post')->where($where)->order('time desc')->select(); 
@@ -36,5 +43,21 @@ class IndexController extends Controller {
     	}else{
     		$this->error($re['con']);
     	}
+    }
+    public function search(){
+        $search=I('get.search');
+        $where['title']=array('like','%'.$search.'%');
+        $type=I('get.type');
+        if($type=="video"){
+            $where['is_video']=1;
+        }elseif ($type=="post") {
+           $where['is_video']=0;
+        }else{
+        }
+        $where['del']=0;
+        $where['is_show']=1;
+        $info=M('Post')->where($where)->order('time desc')->select(); 
+        $this->assign('info',$info);
+        $this->display();
     }
 }

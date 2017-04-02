@@ -15,7 +15,6 @@
 	<title>{$post['title']}</title>
 </head>
 <body>
-
 <include file="Public/header"/>
 
 <div  class="container-fluid" style="background:#FAFAFA">
@@ -62,29 +61,29 @@
   			});
   			$("video").attr('poster',"{$post['image']}");
 		</script>
-<script type="text/javascript">  			
-function exitFullscreen() {
-  if(document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if(document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if(document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  }
- $(".full-screen").attr("onclick","launchFullScreen(document.documentElement)");
-}
-function launchFullScreen(element) { 
- if(element.requestFullscreen) { 
-  element.requestFullscreen(); 
- } else if(element.mozRequestFullScreen) { 
-  element.mozRequestFullScreen(); 
- } else if(element.webkitRequestFullscreen) { 
-  element.webkitRequestFullscreen(); 
- } else if(element.msRequestFullscreen) { 
-  element.msRequestFullscreen(); 
- } 
- $(".full-screen").attr("onclick","exitFullscreen()")
-} 
+		<script type="text/javascript">  			
+			function exitFullscreen() {
+		  		if(document.exitFullscreen) {
+    				document.exitFullscreen();
+  				} else if(document.mozCancelFullScreen) {
+    				document.mozCancelFullScreen();
+  				} else if(document.webkitExitFullscreen) {
+    				document.webkitExitFullscreen();
+  				}
+ 				$(".full-screen").attr("onclick","launchFullScreen(document.documentElement)");
+			}
+			function launchFullScreen(element) { 
+ 				if(element.requestFullscreen) { 
+  					element.requestFullscreen(); 
+ 				} else if(element.mozRequestFullScreen) { 
+  					element.mozRequestFullScreen(); 
+ 				} else if(element.webkitRequestFullscreen) { 
+  					element.webkitRequestFullscreen(); 
+ 				} else if(element.msRequestFullscreen) { 
+  					element.msRequestFullscreen(); 
+ 				} 
+ 					$(".full-screen").attr("onclick","exitFullscreen()")
+			} 
 		</script>
 		<if condition="$Think.session.user.uid eq NULL"> 
 			<script type="text/javascript">
@@ -134,6 +133,7 @@ function launchFullScreen(element) {
 		</div>
 	</div>
 </div>
+
 </body>
 
 <script type="text/javascript">
