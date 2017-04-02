@@ -24,7 +24,7 @@
 					<th>操作</th>
 				</tr>
 				<?php if(is_array($info)): $i = 0; $__LIST__ = $info;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr id="<?php echo ($vo['pid']); ?>">
-						<td><?php echo (pidname($vo['pid'])); ?></td>
+						<td><a href="/Home/Index/post/pid/<?php echo ($vo['pid']); ?>" target="_blank"><?php echo (pidname($vo['pid'])); ?></a></td>
 						<td><?php echo (date("Y/m/d H:i",$vo['time'])); ?></td>
 						<td><span class="del_save glyphicon glyphicon-trash text-danger" value="<?php echo ($vo['pid']); ?>"></span></td>
 					</tr><?php endforeach; endif; else: echo "" ;endif; ?>

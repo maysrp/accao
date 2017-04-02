@@ -16,7 +16,7 @@
 		$back=D('Home/Uc')->user_info($info);
 		if($back['status']){
 			if($type=="name"){
-				return $back['con'][1];
+				return "<a class=\"text-danger\" href=\"/Home/Index/profile/uid/".$uid."\">".$back['con'][1]."</a>";
 			}else{
 				return $back['con'][2];
 			}
@@ -63,5 +63,13 @@
 	function comment($pid){
 		$array=D('Home/Comment')->pid($pid);
 		echo count($array);
+	}
+	function is_fans($uid){
+		$ba=D('Home/Fans')->check_fans($uid,session('user.uid'));
+		if($ba){
+			return "<h3><span class=\"label label-default follow\" value=\"label-default\">已经关注</span></h3>";
+		}else{
+			return "<h3><span class=\"label label-danger follow\" value=\"label-danger\">关注</span></h3>";
+		}
 	}
 ?>

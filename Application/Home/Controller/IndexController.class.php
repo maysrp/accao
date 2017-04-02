@@ -60,4 +60,46 @@ class IndexController extends Controller {
         $this->assign('info',$info);
         $this->display();
     }
+    Public function profile(){
+        $uid=I('get.uid')?I('get.uid'):session('user.uid');//可以修改
+        $my_fans=D('Home/Fans')->uid($uid);
+        $my_follow=D('Home/Fans')->fans($uid);
+
+        $type=I('get.type');
+        if($type=="video"){
+            $where['is_video']=1;
+        }elseif ($type=="post") {
+           $where['is_video']=0;
+        }else{
+        }
+        $where['del']=0;
+        $where['is_show']=1;
+        $where['uid']=$uid;
+        $info=M('Post')->where($where)->order('time desc')->select(); 
+
+
+        $user['fans']=count($my_fans);
+        $user['follow']=count($my_follow);
+        $user['post']=count($info);
+        $this->assign('user',$user);
+        $this->assign('info',$info);
+        $this->display();
+    }
+    public function follow(){
+        $uid=I('get.uid');
+        $fans=session('user.uid');
+        if($uid==$fans){
+            $re['status']=false;
+            $re['con']="不可以自恋！";
+            $this->ajaxReturn($re);
+            return;
+        }
+        if($fans){
+            $re=D('Home/Fans')->toggle($uid,$fans);
+        }else{
+            $re['status']=false;
+            $re['con']="请先登入！";
+        }
+        $this->ajaxReturn($re);
+    }
 }

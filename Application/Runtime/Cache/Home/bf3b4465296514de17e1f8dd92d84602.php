@@ -68,8 +68,7 @@
 	})
 </script>
 	<div class="container">
-		<div id="index" value="<?php echo index ?>">
-</div>
+		
 <div class="row" style="margin: 10px;">
 	<p>
 		<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="all">综合</span>
@@ -136,7 +135,7 @@
 	})
 	$(".select").click(function(){
 		var value=$(this).attr("id");
-		window.location.href="?type="+value;
+		window.location.href="?type="+value+"&search=<?php echo ($_GET['search']); ?>";
 	})
 
 </script>

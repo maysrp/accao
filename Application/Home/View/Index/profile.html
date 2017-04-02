@@ -1,0 +1,94 @@
+	<script src="https://cdn.bootcss.com/messenger/1.5.0/js/messenger.min.js"></script>
+	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger-theme-future.min.css" rel="stylesheet">
+	<div class="row">
+		<div class="row" style="background: #FFF;margin-top:50px; ">
+			<div class="col-md-2 col-md-offset-1" >
+				<img src="/Home/User/avatar/uid/{$Think.get.uid}/type/big" class="img-circle"  width="100px" style="border:5px;margin-top:-50px; ">
+			</div>
+			<div class="col-md-3">
+				<h2><b >{$Think.get.uid|uid} </b> <small>投稿:{$user['post']}    正在关注:{$user['follow']}    粉丝:{$user['fans']}</small></h2>
+			</div>
+			<div class="col-md-3 text-right" >
+				{$Think.get.uid|is_fans}
+			</div>
+		</div>
+	</div>
+	<div class="row" style="margin-top:20px; ">
+		<div class="row" style="background: #FFF">
+			<div class="row" style="margin: 20px;">
+				<p>
+					<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="all">综合</span>
+					<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="video">视频</span>
+					<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="post">文章</span>
+				</p>
+			</div>
+			<hr/>
+			<volist name="info" id="vo">
+				<div class="col-md-6 post_div" style="padding: 10px;" value="{$vo['pid']}">
+					<h3>
+						<a href="/Home/Index/Post/pid/{$vo['pid']}">
+							<if condition="$vo['is_video']">
+								<span class="glyphicon glyphicon-film" title="视频"></span> 
+							<else/>
+								<span class="glyphicon glyphicon-book" title="文章"></span>
+							</if>
+							{$vo['title']}
+						</a>
+					</h3>
+					<p>
+						<small>发布于:{$vo['time']|date="Y/m/d H:i",###} 围观:{$vo['view']} 评论:{$vo['pid']|comment}</small>
+					</p>
+					<if condition="$vo['image']">
+						<img  class="img-thumbnail hide " src="{$vo['image']}" width="40%" id="{$vo['pid']}">
+					</if>
+				</div>
+			</volist>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		$("#{$Think.get.type}").removeClass("text-muted");
+		$("#{$Think.get.type}").addClass("text-danger");
+		$("#{$Think.get.type}").css("font-weight","bold");
+
+		$(".follow").click(function(){
+			$.ajax({
+				url:'/Home/Index/follow/uid/{$Think.get.uid}',
+				success:function(data){
+					if(data.status){
+						var value=$(".follow").attr("value");
+						if(value=="label-default"){
+							$(".follow").attr("value","label-danger");
+							$(".follow").removeClass("label-default");
+							$(".follow").addClass("label-danger");
+							$(".follow").text("关注");
+							mx=Messenger().post(data.con);
+						}else{
+							$(".follow").attr("value","label-default");
+							$(".follow").removeClass("label-danger");
+							$(".follow").addClass("label-default");
+							$(".follow").text("已经关注");
+							mx=Messenger().post(data.con);
+						}
+					}else{
+						mx=Messenger().post(data.con);
+					}
+				}
+			})
+		});
+		$(".select").click(function(){
+		var value=$(this).attr("id");
+			window.location.href="?type="+value;
+		})
+		$("body").css('background','url(http://bilibara.com/images/2017/02/08/maxresdefault.jpg)');
+		$(".post_div").mouseover(function(){
+			var value=$(this).attr("value");
+			$("#"+value).removeClass('hide');
+		});
+		$(".post_div").mouseleave(function(){
+			var value=$(this).attr("value");
+			$("#"+value).addClass('hide');
+		})
+	</script>

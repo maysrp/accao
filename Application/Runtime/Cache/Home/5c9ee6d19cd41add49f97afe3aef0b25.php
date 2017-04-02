@@ -26,13 +26,25 @@
 </head>
 <body>
 	<div class="container">
-	<h1 class="col-md-3 col-md-xs-6"><a href="/">Nyaa动漫</a></h1>
-	<div class="col-md-3 col-md-offset-6">
-		<a href="/Home/User" class="btn btn-link" title="用户:<?php echo ($_SESSION['user']['name']); ?>"><img src="/Home/User/avatar/uid/<?php echo ($_SESSION['user']['uid']); ?>" width="100px" class="img-circle"></a>
+	<div class="row">
+		<div class="col-md-3 col-md-xs-6">
+			<h2 ><a href="/">Nyaa动漫</a></h2>
+		</div>
+		<div class="col-md-3 col-md-xs-6" style="margin-top:20px; ">
+			<div class="input-group">
+			<input type="text" placeholder="搜索一下" class="form-control">
+				<div class="input-group-btn">
+					<button class="btn btn-danger"><span class="glyphicon glyphicon-search"></span></button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3 col-md-offset-3">
+			<a href="/Home/User" class="btn btn-link" title="用户中心 <?php echo ($_SESSION['user']['name']); ?>"><img src="/Home/User/avatar/uid/<?php echo ($_SESSION['user']['uid']); ?>/type/small" class="img-circle"></a>
+		</div>
 	</div>
 </div>
 
-<div class="row" style="background-image:url(http://bilibara.com/images/2017/02/08/maxresdefault.jpg);">
+<div class="container-fluid show_header_image" style="background-image:url(http://bilibara.com/images/2017/02/08/maxresdefault.jpg);">
 <br>
 <br>
 <br>
@@ -44,6 +56,15 @@
 <br>
 <br>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var index=$('#index').attr("value");
+		if(index){
+		}else{
+			$(".show_header_image").hide();
+		}
+	})
+</script>
 	<div class="container">
 			<div class="row">
 		<div class="row">

@@ -91,10 +91,16 @@ class PostModel extends Model {
 		}
 		return $re;
 	}
-	function uid($uid){
+	function uid($uid){//用户自己或者管理员查看，显示不能展现的帖子
 		$where['uid']=$uid;
 		$where['del']=0;
 		return $this->where($where)->order('time desc')->select();
+	}
+	function my($uid){//外部展现
+		$where['is_show']=1;
+		$where['uid']=$uid;
+		$where['del']=0;
+		return $this->where($where)->order('time desc')->select();	
 	}
 
 
