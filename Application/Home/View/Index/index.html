@@ -9,10 +9,10 @@
 	<hr>
 </div>
 <div class="row">
-	<div class="row">
+	<div class="row" style="margin: 10px;">
 		<volist name="info" id="vo">
 		<div class="row post" value="{$vo['pid']}">
-			<div class="col-md-1 col-xs-1" >
+			<div class="col-md-1 col-xs-2" >
 				<div  id="{$vo['pid']}" style="background: #5BB75B;width: 60px;height: 60px; ">
 					<a href="/Home/Index/post/pid/{$vo['pid']}">
 						<h3 class="text-right" style="color: #FFF"><b> {$vo['pid']|comment}</b></h3>
@@ -20,7 +20,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-md-11 col-xs-11" >
+			<div class="col-md-11 col-xs-10" >
 				<h3 >
 					<if condition="$vo['is_video']">
   						<span class="text-primary glyphicon glyphicon-film" title="视频"></span>

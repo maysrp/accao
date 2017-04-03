@@ -13,13 +13,19 @@
 	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/messenger/1.5.0/css/messenger-theme-future.min.css" rel="stylesheet">
 	<title>{$post['title']}</title>
+	<style>
+		img{
+		max-width:80%;
+		}
+	
+	</style>
 </head>
 <body>
 <include file="Public/header"/>
 
 <div  class="container-fluid" style="background:#FAFAFA">
 <div class="container">
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-10 col-md-offset-1 col-xs-12">
 	<div class="row" style="margin-left:5px; ">
 		<h3>{$post['title']}</h3>
 		<h5 class="text-muted">
@@ -52,10 +58,14 @@
 			<script src="/plugins/danmu/js/main.js"></script>
 		</div>
 		<script type="text/javascript">
+			var width=window.screen.width;
+			if(width>1200){
+				width=900;
+			}
 			$("#danmu").DanmuPlayer({
     			src:"{$post['video_url']}",
-    			height: "480px", //区域的高度
-    			width: "800px" //区域的宽度
+    			height:0.54*width, //区域的高度
+    			width: 0.9*width //区域的宽度
     			,urlToGetDanmu:"/Home/Danmu/index/pid/{$post['pid']}"
    				,urlToPostDanmu:"/Home/Danmu/send/pid/{$post['pid']}"
   			});
@@ -101,7 +111,7 @@
 				</if>
 			</div>
 			<div class="row">
-				{$post['post']}
+				<div class="col-md-12 col-xs-12">{$post['post']}</div>
 			</div>
 			<div class="row">
 			<hr/>
@@ -110,10 +120,10 @@
 	</if>
 	<div class="row">
 		<hr>
-		<div class="col-md-6">
+		<div class="col-md-6 col-xs-6">
 			<div class="btn btn-danger save" style="background:#FD4C4C;">收藏 <span class="glyphicon glyphicon-star text-center" ></span></div> 
 		</div>
-		<div class="col-md-6" >
+		<div class="col-md-6 col-xs-6" >
 			<img src="/Home/User/avatar/uid/{$post['uid']}/type/small" class="img-circle"/> <span> {$post['uid']|uid}</span>
 		</div>
 	</div>

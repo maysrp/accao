@@ -35,7 +35,7 @@
   							</if>
   						</td>
 						<td>{$vo['title']} <a href="/Admin/Index/view/pid/{$vo['pid']}" title="查看帖子"><span class="glyphicon glyphicon-eye-open"></span></a></td>
-						<td><img src="/Home/User/avatar/uid/{$vo['uid']}/type/small" title="{$vo['uid']|uid}" class="img-rounded" width="30px;" /></td>
+						<td><img src="/Home/User/avatar/uid/{$vo['uid']}/type/small" class="img-rounded" width="30px;" /></td>
 						<if condition="$vo['edit_time']">
 							<td>{$vo['edit_time']|date="Y/m/d H:i",###}</td>
 						<else/>

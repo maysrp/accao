@@ -92,8 +92,8 @@
 		$(".comment").html("");
 		for(x in data){
 			var box=$("<div class=\"row comment_list\"></div>")
-			var image=$("<div class=\"user col-md-1\"><a name=\""+data[x].lou+"\"></a><img class=\"img-rounded\" src=\"/Home/User/avatar/uid/"+data[x].uid+"/type/small\"/></div>");
-			var div_c=$("<div class=\"col-md-11\"></div>");
+			var image=$("<div class=\"user col-md-1 col-xs-12\"><a name=\""+data[x].lou+"\"></a><img class=\"img-rounded\" src=\"/Home/User/avatar/uid/"+data[x].uid+"/type/small\"/></div>");
+			var div_c=$("<div class=\"col-md-11 col-xs-12\"></div>");
 			if(data[x].relou>0){
 				var relou=$("<div  class=\"row text-warning\">回复#"+data[x].relou+"</di>");
 				relou.appendTo(div_c);
@@ -112,8 +112,8 @@
 	}
 	function add(data){
 		var box=$("<div class=\"row comment_list\"></div>")
-			var image=$("<div class=\"user col-md-1\"><a name=\""+data.lou+"\"></a><img class=\"img-rounded\" src=\"/Home/User/avatar/uid/"+data.uid+"/type/small\"/></div>");
-			var div_c=$("<div class=\"col-md-11\"></div>");
+			var image=$("<div class=\"user col-md-1 col-xs-12\"><a name=\""+data.lou+"\"></a><img class=\"img-rounded\" src=\"/Home/User/avatar/uid/"+data.uid+"/type/small\"/></div>");
+			var div_c=$("<div class=\"col-md-11 col-xs-12\"></div>");
 			if(data.relou>0){
 				var relou=$("<div  class=\"row text-warning\">回复#"+data.relou+"</di>");
 				relou.appendTo(div_c);
