@@ -33,7 +33,7 @@
 			</script>
 		</if>
 		</p>
-		<p><button class="btn btn-info" id="save">收藏 <span class="badeg">{$Think.session.user.uid|saveuid}</span></button> <a href="/Home/Post/create_post" class="btn btn-primary">发布</a> <a href="/Home/User/logout" class="btn btn-danger">登出</a></p>
+		<p><button class="btn btn-info" id="save">收藏 <span class="badge">{$Think.session.user.uid|saveuid}</span></button> <a href="/Home/Post/create_post" class="btn btn-primary">发布</a> <a href="/Home/User/logout" class="btn btn-danger">登出</a> <button class="btn btn-success" id="message">消息<span class="badge">{$message}</span></button> <button class="btn btn-warning" id="tz">通知<span class="badge">{$tz}</span></button></p>
 	</div>
 </div>
 <div class="row">
@@ -74,6 +74,9 @@
 		</tr>
 	</volist>
 	</table>
+	<div class="text-center">
+		{$page}
+	</div>
 	</div>
 </div>
 
@@ -86,7 +89,7 @@
 				</h3>
 			</div>
 			<div class="modal-body">
-				<iframe src="" id="iframe" width="95%" frameborder="no"  scrolling="no" allowtransparency="yes"></iframe>
+				<iframe src="" id="iframe" width="95%" frameborder="no"   allowtransparency="yes" height="666px"></iframe>
 				<div id="content">
 					
 				</div>
@@ -99,11 +102,26 @@
 	</div>
 </div>
 
+<div class="modal fade"  id="mmodal" role="dialog" rem="消息列表">
+	<div class="modal-dialog modal-lg" role="document">
+		<iframe src="" id="miframe" width="95%" frameborder="no"   allowtransparency="yes" height="666px"></iframe>
+	</div>
+</div>
+
 <script type="text/javascript">
 	$("#save").click(function(){
 		$('#modal').modal('show');
 		$(".modal-title").text("收藏夹");
 		$("#iframe").attr("src","/Home/User/save");
+	})
+	$("#tz").click(function(){
+		$('#modal').modal('show');
+		$(".modal-title").text("通知");
+		$("#iframe").attr("src","/Home/User/tz");
+	})
+	$("#message").click(function(){
+		$('#mmodal').modal('show');
+		$("#miframe").attr("src","/Home/User/message");
 	})
 
 </script>

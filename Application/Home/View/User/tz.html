@@ -19,15 +19,21 @@
 		<div class="panel panel-default">
 			<table class="table">
 				<tr>
-					<th>文章名</th>
-					<th>关注时间</th>
-					<th>操作</th>
+					<th>内容</th>
+					<th>时间</th>
+					<th>状态</th>
 				</tr>
 				<volist name="info" id="vo">
-					<tr id="{$vo['pid']}">
-						<td><a href="/Home/Index/post/pid/{$vo['pid']}" target="_blank">{$vo['pid']|pidname}</a></td>
-						<td>{$vo['time']|date="Y/m/d H:i",###}</td>
-						<td><span class="del_save glyphicon glyphicon-trash text-danger" value="{$vo['pid']}"></span></td>
+					<tr>
+						<td>{$vo['info']}</td>			
+						<td>{$vo['time']|date="Y/m/d H:i",###}</td>			
+						<td>
+							<if condition="$vo['view']">
+								<span class="text-success glyphicon glyphicon-ok "></span>
+							<else/>
+								<span class="text-danger glyphicon glyphicon-envelope"></span>
+							</if>
+						</td>			
 					</tr>
 				</volist>
 			</table>
@@ -38,19 +44,4 @@
 	</div>
 </div>
 </body>
-<script type="text/javascript">
-	$(".del_save").click(function(){
-		var pid=$(this).attr("value");
-		$.ajax({
-			url:'/Home/Save/del/pid/'+pid,
-			success:function(data){
-				if(data.status){
-					confirm(data.con);
-					$("#"+pid).remove();
-				}else{
-					confirm("失败:"+data.con);
-				}
-			}
-		})
-	})
-</script>
+</html>

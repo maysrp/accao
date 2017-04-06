@@ -48,6 +48,11 @@ class CommentModel extends Model {
 			D('Home/Userpoint')->comment($add['uid'],1);
 			$re['status']=true;
 			$re['con']=$cid;//返回楼层数
+			if($info['ccid']>0){
+				D('Home/Message')->comment($add['ccid'],$add['uid'],$add['lou']);
+			}else{
+				D('Home/Message')->post($add['pid'],$add['uid']);
+			}
 		}else{
 			$re['status']=false;
 			$re['con']="未知错误";

@@ -9,17 +9,72 @@ class UserController extends Controller {
 	}
 	public function index(){//用户信息
 		$this->login_false();
-		$mypost=$this->my_post();
+		$info=$this->my_post();
 		$cn=$this->c_avatar();
 		$point=D('Home/Userpoint')->uid_point($this->session['uid']);
 		$qian=D('Home/Qian')->isqian($this->session['uid']);
 		$today=D('Home/pointmax')->uid($this->session['uid']);
+		$tz=D('Home/Message')->unmy($this->session['uid']);
+		$message=D('Home/Uc')->unmessage_count($this->session['uid']);
+
+
+		$count=count($info);
+		$Page= new \Think\Page($count,25);
+		//$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+		$this->assign("tz",count($tz));
+		$this->assign("message",$message);
 		$this->assign("today",$today);
 		$this->assign("qian",$qian);//签到非false 返回连续签到
 		$this->assign("point",$point['point']);
-		$this->assign("post",$mypost);
+		$this->assign("post",$list);
 		$this->assign("cn",$cn);
 		$this->display();
+	}
+	public function tz(){
+		$this->login_false();
+		$info=D('Home/Message')->my($this->session['uid']);
+
+		D('Home/Message')->view($this->session['uid']);
+
+		$count=count($info);
+		$Page= new \Think\Page($count,25);
+		//$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+		$this->assign("info",$list);
+		$this->display();
+	}
+	public function pm(){
+		$suid=$this->session['uid'];
+		if($suid){
+			$uid=I('post.uid');
+			$pm=I('post.pm');
+			$su="私信";
+			$re=D('Home/Uc')->message($suid,$uid,$su,$pm);
+		}else{
+			$re['status']=false;
+			$re['con']="未登入";
+		}
+		$this->ajaxReturn($re);
+	}
+	public function message(){
+		$this->login_false();
+		$message=D('Home/Uc')->user_message($this->session['uid']);
+		echo $message;
 	}
 	public function qian(){//签到
 		$this->login_false();
@@ -27,9 +82,6 @@ class UserController extends Controller {
 		$re=D('Home/Qian')->qiandao($uid);
 		D('Home/Userpoint')->qian($uid);
 		$this->ajaxReturn($re);
-	}
-	function mes(){
-		echo D('Home/uc')->mes();
 	}
 	public function login(){
 		$this->login_true();
@@ -122,8 +174,19 @@ class UserController extends Controller {
 	}
 	public function save(){
 		$this->login_false();
-		$save=A('Home/Save')->uid($this->session['uid']);
-		$this->assign('info',$save);
+		$info=A('Home/Save')->uid($this->session['uid']);
+		$count=count($info);
+		$Page= new \Think\Page($count,25);
+		//$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+		$this->assign("info",$list);
 		$this->display();
 	}
 	private function my_post(){

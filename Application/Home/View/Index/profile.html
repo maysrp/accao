@@ -7,7 +7,7 @@
 				<img src="/Home/User/avatar/uid/{$Think.get.uid}/type/big" class="img-circle"  width="100px" style="border:5px;margin-top:-50px; ">
 			</div>
 			<div class="col-md-6">
-				<h2><b >{$Think.get.uid|uid} </b> <small>投稿:{$user['post']}    正在关注:{$user['follow']}    粉丝:{$user['fans']}</small></h2>
+				<h2><b >{$Think.get.uid|uid} </b> <small>投稿:{$user['post']}    正在关注:{$user['follow']}    粉丝:{$user['fans']}  <span data-toggle="modal" data-target="#message_box" title="发送短消息" class="text-info glyphicon glyphicon-envelope"></span></small></h2>
 			</div>
 			<div class="col-md-3 " >
 				{$Think.get.uid|is_fans}
@@ -45,7 +45,30 @@
 				</div>
 			</volist>
 		</div>
+		<div class="row text-center">
+			{$page}
+		</div>
 	</div>
+
+<div class="modal fade" tabindex="-1" id="message_box" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+    	<div class="modal-header">
+    		<h3 class="modal-title">
+    			发送给{$Think.get.uid|uid}的消息:
+    		</h3>
+    	</div>
+    	<div class="modal-body">
+    		<input type="uid" disabled id="uid" value="{$Think.get.uid}" class="hide">
+    		<textarea class="form-control" id="textarea"></textarea>
+    	</div>
+    	<div class="modal-footer">
+    		<button class="btn btn-primary" id="message">发送</button>
+    	</div>
+    </div>
+  </div>
+</div>
+
 
 	<script type="text/javascript">
 
@@ -90,5 +113,28 @@
 		$(".post_div").mouseleave(function(){
 			var value=$(this).attr("value");
 			$("#"+value).addClass('hide');
+		})
+		$("#message").click(function(){
+			var textarea=$("#textarea").val();
+			var uid=$("#uid").val();
+			$.ajax({
+				method:'post',
+				data:{
+					uid:uid,
+					pm:textarea
+				},
+				url:"/Home/User/pm",
+				success:function(data){
+					if(data.status){
+						textarea=$("#textarea").val("");
+						mx=Messenger().post("消息已经发送");
+					}else{
+						textarea=$("#textarea").val("");
+						mx=Messenger().post(data.con);
+					}
+					$("#message_box").modal('hide');
+				}
+			})
+
 		})
 	</script>

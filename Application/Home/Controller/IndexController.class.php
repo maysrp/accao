@@ -30,8 +30,20 @@ class IndexController extends Controller {
         $where['del']=0;
         $where['is_show']=1;
         $info=M('Post')->where($where)->order('time desc')->select(); 
-        $this->assign('info',$info);
-        $this->display();   	
+
+        $count=count($info);
+        $Page= new \Think\Page($count,25);
+        //$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+        $this->assign("info",$list);
+        $this->display();
     }
     public function post(){
     	$pid=I('get.pid');
@@ -57,7 +69,19 @@ class IndexController extends Controller {
         $where['del']=0;
         $where['is_show']=1;
         $info=M('Post')->where($where)->order('time desc')->select(); 
-        $this->assign('info',$info);
+
+        $count=count($info);
+        $Page= new \Think\Page($count,25);
+        //$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+        $this->assign("info",$list);
         $this->display();
     }
     Public function profile(){
@@ -77,12 +101,22 @@ class IndexController extends Controller {
         $where['uid']=$uid;
         $info=M('Post')->where($where)->order('time desc')->select(); 
 
-
+        $count=count($info);
+        $Page= new \Think\Page($count,25);
+        //$Page->setConfig('header',"条弹幕");
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+        $this->assign("info",$list);
         $user['fans']=count($my_fans);
         $user['follow']=count($my_follow);
         $user['post']=count($info);
         $this->assign('user',$user);
-        $this->assign('info',$info);
         $this->display();
     }
     public function follow(){

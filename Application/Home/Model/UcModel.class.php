@@ -17,7 +17,7 @@ class UcModel extends Model {
 			$re['con']="注册成功";
 			session('user.uid',$uid);
 			session('user.name',$info['username']);
-			session('user.email',$info['password']);
+			session('user.email',$info['email']);
 		}elseif($uid==-1){
 			$re['status']=false;
 			$re['con']="用户名不合法";
@@ -41,11 +41,34 @@ class UcModel extends Model {
 		}
 		return $re;
 	}
-	public function mes(){
-		return uc_pm_location(2);
+	public function user_message($uid){
+		$uid=(int)$uid;
+		return uc_pm_location($uid);
+	}
+	public function unmessage_count($uid){
+		return uc_pm_checknew($uid,0);
 	}
 	public function avatar($uid){
 		return uc_avatar($uid,'real',1);
+	}
+	public function message($suid,$uid,$bt,$nr){
+		$ba=uc_pm_send($suid,$uid,$bt,$nr);
+		if($ba>0){
+			$re['status']=true;
+		}elseif($ba==-2){
+			$re['status']=false;
+			$re['con']="超过两次发送短消息时间间隔";
+		}elseif($ba==-8){
+			$re['status']=false;
+			$re['con']="不能给自己发短消息";
+		}elseif($ba==-9){
+			$re['status']=false;
+			$re['con']="收件人为空";
+		}else{
+			$re['status']=false;
+			$re['con']="其他错误";
+		}
+		return $re;
 	}
 	public function user_login($info){
 		$r_a=uc_user_login($info['username'],$info['password'],$info['isuid']);
