@@ -192,7 +192,7 @@ class UserController extends Controller {
 	private function my_post(){
 		$where['uid']=$this->session['uid'];
 		$where['del']=0;
-		$ba=M('Post')->where($where)->select();
+		$ba=M('Post')->where($where)->order('time desc')->select();
 		return $ba;
 	}
 	private function is_login(){

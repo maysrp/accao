@@ -1,0 +1,45 @@
+
+<div class="panel panel-default">
+	<div><h3 class="text-center">图片上传</h3></div>
+ 	<div id="imgprecent" class="text-center">
+ 		
+ 	</div>
+	<div class="input-group" style="padding: 10px;">
+		<input type="file" id="image" class="hide">
+		<input type="text" class="form-control" id="imagename" placeholder="点击上传图片">
+		<div class="input-group-btn">
+			<button id="upimage" class="btn btn-success" >上传</button>
+		</div>
+	</div>
+
+</div>
+ 
+<script type="text/javascript">
+	
+	$("#imagename").click(function(){
+		$("#image").click();
+	})
+	$("#image").change(function(){
+		var imagename=$(this).val();
+		file=this.files[0];
+		$("#imagename").val(imagename);
+	})
+	$("#upimage").click(function(){
+		var fd=new FormData();
+		fd.append("image",file);
+		$.ajax({
+			url:"/Home/Image/upload",
+			type:"POST",
+			data:fd,
+			processData: false,  // 告诉jQuery不要去处理发送的数据
+  			contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+			success:function(data){
+				if(data.status){
+					$("input[name='image']").val(data.con);
+				}else{
+					alert(data.con);
+				}
+			}
+		})
+	})
+</script>

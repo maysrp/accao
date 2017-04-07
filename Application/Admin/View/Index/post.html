@@ -1,6 +1,6 @@
 <script type="text/javascript" src="/plugins/ue/ueditor.config.js"></script>  
 <script type="text/javascript" src="/plugins/ue/ueditor.all.js"></script> 
-<div class="row">
+<div class="container">
 <div class="row">
 <div class="panel panel-default">
 <div class="panel-heading"><h4>发布帖子</h4></div>
@@ -22,7 +22,7 @@
                 <div class="input-group-addon">
                     <span class="glyphicon glyphicon-film"></span>
                 </div>
-                <input type="text" name="video_url" class="form-control">
+                <input type="text" name="video_url" class="form-control" id="video_dir">
             </div>
         </div>
 		<div class="row" style="padding:5px">
@@ -34,10 +34,14 @@
 		</div>
 	</form>
 </div>
+<div class="col-md-3">
+    <include file="Image/index"/>
+    <include file="Video/index"/>
 </div>
 </div>
 </div>
 </div>
+
 
 <script type="text/javascript">
 	UE.getEditor('post' ,{

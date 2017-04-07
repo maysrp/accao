@@ -22,7 +22,7 @@
                 <div class="input-group-addon">
                     <span class="glyphicon glyphicon-film"></span>
                 </div>
-                <input type="text" name="video_url" class="form-control" value="{$info['video_url']}" placeholder="视频链接">
+                <input type="text" name="video_url" class="form-control" value="{$info['video_url']}" placeholder="视频链接" id="video_dir">
             </div>
         </div>
         <div class="row" style="padding:5px">
@@ -33,6 +33,10 @@
             <button class="btn btn-primary">发布文章</button>
         </div>
     </form>
+</div>
+<div class="col-md-3">
+    <include file="Image/index"/>
+    <include file="Video/index"/>
 </div>
 </div>
 </div>

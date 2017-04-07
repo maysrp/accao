@@ -81,7 +81,7 @@ class PostModel extends Model {
 	function my_post($info){
 		$where['pid']=$info['pid'];
 		$where['uid']=$info['uid'];
-		$be=$this->where($where)->select();
+		$be=$this->where($where)->order('time desc')->select();
 		if($be){
 			$re['status']=true;
 			$re['con']=$be['0'];
