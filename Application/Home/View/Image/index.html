@@ -1,5 +1,5 @@
 
-<div class="panel panel-default">
+<div class="panel panel-default" style="margin-top:25px; ">
 	<div><h3 class="text-center">图片上传</h3></div>
  	<div id="imgprecent" class="text-center">
  		
@@ -36,6 +36,8 @@
 			success:function(data){
 				if(data.status){
 					$("input[name='image']").val(data.con);
+					$("#imagename").val("");
+					$("#imagename").attr("placeholder","图片已经上传");
 				}else{
 					alert(data.con);
 				}

@@ -1,3 +1,20 @@
+<style type="text/css">
+	#all:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+	#video:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+	#post:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+</style>
 <div id="index" value="<php>echo index</php>">
 </div>
 <div class="row" style="margin: 10px;">
@@ -61,6 +78,12 @@
 	{$page}
 </div>
 <script type="text/javascript">
+	var col="{$Think.get.type}";
+	if(!col){
+		$("#all").removeClass("text-muted");
+		$("#all").addClass("text-danger");
+		$("#all").css("font-weight","bold");
+	}
 	$("#{$Think.get.type}").removeClass("text-muted");
 	$("#{$Think.get.type}").addClass("text-danger");
 	$("#{$Think.get.type}").css("font-weight","bold");
