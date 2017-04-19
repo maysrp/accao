@@ -22,6 +22,12 @@
 			}
 		}
 	}
+	function uidname($uid){
+		$info['username']=$uid;
+		$info['isuid']=1;
+		$back=D('Home/Uc')->user_info($info);
+		return $back['con'][1];
+	}
 	function danmu($info){
 		$en=json_decode($info,true);
 		return $en['text'];

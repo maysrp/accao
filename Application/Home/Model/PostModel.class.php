@@ -102,6 +102,47 @@ class PostModel extends Model {
 		$where['del']=0;
 		return $this->where($where)->order('time desc')->select();	
 	}
+	function hot($type="week",$num=5){//热门帖子
+		$time=time();
+		switch ($type) {
+			case 'day':
+				$where['time']=array('gt',$time-86400);
+				break;
+			case 'week':
+				$where['time']=array('gt',$time-7*86400);
+				break;
+			case 'month':
+				$where['time']=array('gt',$time-30*86400);
+				break;
+			default:
+				break;
+		}
+		$where['is_show']=1;
+		$where['del']=0;
+		$ba=$this->where($where)->order('view desc')->limit($num)->select();
+		return $ba;
+	}
+	function nim($type="week",$num=5){//新贴
+		$time=time();
+		switch ($type) {
+			case 'day':
+				$where['time']=array('gt',$time-86400);
+				break;
+			case 'week':
+				$where['time']=array('gt',$time-7*86400);
+				break;
+			case 'month':
+				$where['time']=array('gt',$time-30*86400);
+				break;
+			default:
+				break;
+		}
+		$where['image']=array('neq',"0");
+		$where['is_show']=1;
+		$where['del']=0;
+		$ba=$this->where($where)->order('time desc')->limit($num)->select();
+		return $ba;
+	}
 
 
 }

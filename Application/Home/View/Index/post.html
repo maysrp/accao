@@ -103,6 +103,15 @@
 			</script>
 		<else/>
 		</if>
+		<div class="row">
+				<br>
+				<p>
+					<a  class="btn btn-info" data-toggle="collapse"  href="#ms_info"  >描述</a>
+				</p>
+			<div class="collapse bg-info" id="ms_info" style="border-radius: 5px;padding: 5px; ">
+				<p class="col-md-12 col-xs-12">{$post['post']}</p>
+			</div>
+		</div>
 	<else/>
 		<div class="row">
 			<div class="row">
@@ -111,7 +120,7 @@
 				</if>
 			</div>
 			<div class="row">
-				<div class="col-md-12 col-xs-12">{$post['post']}</div>
+				<div class="col-md-12 col-xs-12 bg-info">{$post['post']}</div>
 			</div>
 			<div class="row">
 			<hr/>

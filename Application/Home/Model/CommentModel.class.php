@@ -84,6 +84,10 @@ class CommentModel extends Model {
 		}
 		return $re;
 	}
+	function nic($num=10){
+		$where['del']=0;
+		return $this->where($where)->order('time desc')->limit($num)->select();
+	}
 
 
 

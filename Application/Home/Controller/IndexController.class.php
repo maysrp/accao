@@ -41,6 +41,12 @@ class IndexController extends Controller {
         }
         $list=array_slice($info, 25*($_GET['p']-1),25);
         $show=$Page->show();
+        $hot=D('Post')->hot('month',10);
+        $nim=D('Post')->nim('month',5);
+        $nic=D('Comment')->nic();
+        $this->assign('hot',$hot);
+        $this->assign('nim',$nim);
+        $this->assign('nic',$nic);
         $this->assign('page',$show);
         $this->assign("info",$list);
         $this->display();
