@@ -36,6 +36,14 @@
 		$m=M('Post')->find($pid);
 		return $m['title'];
 	}
+	function pidview($pid){
+		$m=M('Post')->find($pid);
+		return $m['view'];
+	}
+	function pidtime($pid){
+		$m=M('Post')->find($pid);
+		return date("Y/m/d H:i",$m['time']);
+	}
 	function ad_all(){
 		$info=M('ad')->select();
 		return $info;
@@ -76,6 +84,45 @@
 			return "<h3><span class=\"label label-default follow\" value=\"label-default\">已经关注</span></h3>";
 		}else{
 			return "<h3><span class=\"label label-danger follow\" value=\"label-danger\">关注</span></h3>";
+		}
+	}
+	function cool($pid){
+		$pid=(int)$pid;
+		return D('Home/Cool')->cool($pid);
+	}
+	function cool_t_num($pid){
+		$all=cool($pid);
+		return count($all['t']);
+	}
+	function cool_f_num($pid){
+		$all=cool($pid);
+		return count($all['f']);
+	}
+	function cool_a_num($pid){
+		$all=cool($pid);
+		return count($all['a']);
+	}
+	function is_recom($pid){
+		if(D('Home/Recom')->is_recom($pid)){
+			return true;
+		}else{
+			return 0;
+		}
+	}
+	function pid_tag($pid){
+		$info=D('Home/Tag')->pid($pid);
+		if(count($info)!=0){
+			foreach ($info as $key => $value) {
+				echo "<div class=\"label label-info\"><a href=\"/Home/Index/tag/name/".$value."\">".$value."</a></div> ";
+			}
+		}
+	}
+	function admin_pid_tag($pid){
+			$info=D('Home/Tag')->pid_tag($pid);
+			if(count($info)!=0){
+			foreach ($info as $key => $value) {
+				echo "<div class=\"label label-info admin_tag\" value=\"".$value['tid']."\" id=\"tid".$value['tid']."\" >".$value['name']."  <span class=\"text-danger glyphicon glyphicon-trash\"></span></div> ";
+			}
 		}
 	}
 ?>

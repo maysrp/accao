@@ -5,7 +5,7 @@ class CommentController extends Controller {
 	public $session;
 	public function __construct(){
 		parent::__construct();
-		$this->session=session('user');
+		$this->session=A('Session')->index();
 	}
 	public function add(){
 		$info['pid']=I('post.pid');

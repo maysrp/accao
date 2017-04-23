@@ -68,6 +68,27 @@
 			</div>
 		</div>
 	</if>
+	<div class="row">
+		{$post['pid']|admin_pid_tag}
+	</div>
 </div>
 
 </div>
+
+<script>
+	$(".admin_tag").click(function(){
+		var value=$(this).attr("value");
+		if(value){
+			$.ajax({
+				url:'/Admin/Index/tag_del/tid/'+value,
+				success:function(data){
+					if(data.status){
+						$("#tid"+value).remove();
+					}
+				}
+
+			})
+		}
+	})
+
+</script>

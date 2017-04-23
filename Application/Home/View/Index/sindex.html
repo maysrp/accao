@@ -1,0 +1,180 @@
+<style type="text/css">
+	#all:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+	#video:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+	#post:hover{
+		font-size: 30px;
+		color: #F41211;
+		font-weight:bold;
+	}
+</style>
+
+<div xs="row" class="row">
+
+<div class="col-md-9 col-xs-12" >
+	<div class="row" style="margin: 10px;">
+		<p>
+			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="all">综合</span>
+			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="video">视频</span>
+			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="post">文章</span>
+		</p>
+		<hr>
+	</div>
+
+	<div class="row">
+		<div class="row" style="margin: 10px;">
+			<volist name="info" id="vo">
+			<div class="row post" value="{$vo['pid']}">
+				<div class="col-md-1 col-xs-2" style="padding:5px;">
+					<div  id="{$vo['pid']}" style="background: #5BB75B;width: 60px;height: 60px; ">
+						<a href="/Home/Index/post/pid/{$vo['pid']}">
+							<h3 class="text-right" style="color: #FFF"><b> {$vo['pid']|comment}</b></h3>
+							<h4 class="text-right" style="color: #FFF"> 评论</h4>
+						</a>
+					</div>
+				</div>
+				<div class="col-md-11 col-xs-10" >
+					<h3 class="bhh">
+						<if condition="$vo['is_video']">
+  							<span class="text-primary glyphicon glyphicon-film" title="视频"></span>
+  						<else/>
+  							<span class="glyphicon glyphicon-book" title="文章"></span>
+  						</if>
+						<a href="/Home/Index/post/pid/{$vo['pid']}" >{$vo['title']}</a>
+					</h3>
+					<p>
+						<small class="text-muted">
+							{$vo['uid']|uid}|发布时间:{$vo['time']|date="Y/m/d H:i",###}|
+							最后修改时间:
+							<if condition="$vo['edit_time']">
+								{$vo['edit_time']|date="Y/m/d H:i",###}
+							<else/>
+								{$vo['time']|date="Y/m/d H:i",###}
+							</if>
+							围观:{$vo['view']}
+							收藏:{$vo['pid']|savepid}
+							评论:{$vo['pid']|comment}
+						</small>
+					</p>
+					<div>
+					<if condition="$vo['image']">
+						<img  class="img-thumbnail" src="{$vo['image']}" width="500px;">
+					</if>
+					</div>
+				</div>
+			</div>
+			<hr>
+			</volist>
+		</div>
+	</div>
+</div>
+<div class="col-md-3 col-xs-12">
+	<div class="row">
+		<h3>新帖</h3>
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					 	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  	  					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  	  					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  	  					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<volist name="nim" id="vo">
+						<if condition="$i eq 1">
+							<div class="item active">
+						<else/>
+							<div class="item">
+						</if>
+     							<img src="{$vo['image']}" alt="{$vo['title']}">
+      							<div class="carousel-caption">
+      								<a href="/Home/Index/post/pid/{$vo['pid']}"><h3 class="bhh">{$vo['title']}</h3></a>
+      							</div>
+    						</div>
+					</volist>
+				</div>
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    				<span class="sr-only">Previous</span>
+  				</a>
+  				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    				<span class="sr-only">Next</span>
+  				</a>
+			</div>
+	</div>
+	<div class="row">
+		<h3>围观热帖</h3>
+		<div class="list-group">
+				<volist name="hot" id="vo">
+					<a href="/Home/Index/post/pid/{$vo['pid']}" class="list-group-item">
+						<h4  class="bhh list-group-item-heading">{$vo['title']}</h4>
+						<small class="list-group-item-text">
+							围观:{$vo['view']}
+							收藏:{$vo['pid']|savepid}
+							评论:{$vo['pid']|comment}
+						</small>
+					</a>
+				</volist>
+
+			</div>
+	</div>	
+	<div class="row">
+		<h3>最新回复</h3>
+		<div class="list-group">
+				<volist name="nic" id="vo">
+					<a href="/Home/Index/post/pid/{$vo['pid']}" class="list-group-item">
+						<h4  class="bhh list-group-item-heading"><span class="text-primary">{$vo['lou']}楼</span><small>{$vo['uid']|uidname} 回复《{$vo['pid']|pidname}》</small></h4>
+						<small class="list-group-item-text ">
+								{$vo['comment']}
+								
+						</small>
+					</a>
+				</volist>
+
+			</div>
+	</div>
+</div>
+</div xs="row">
+
+
+
+<div class="row addd">
+	<?php ad_1() ?>
+</div>
+<div class="row text-center">
+	{$page}
+</div>
+<script type="text/javascript">
+	var col="{$Think.get.type}";
+	if(!col){
+		$("#all").removeClass("text-muted");
+		$("#all").addClass("text-danger");
+		$("#all").css("font-weight","bold");
+	}
+	$("#{$Think.get.type}").removeClass("text-muted");
+	$("#{$Think.get.type}").addClass("text-danger");
+	$("#{$Think.get.type}").css("font-weight","bold");
+	$(".post").mouseover(function(){
+		var pid=$(this).attr("value");
+		$("#"+pid).css("background","#0187C5");
+		$("#"+pid).animate({"margin-left":"-5px"},120);  
+	})
+	$(".post").mouseleave(function(){
+		var pid=$(this).attr("value");
+		$("#"+pid).css("background","#5BB75B");
+		$("#"+pid).animate({"margin-left":"5px"},100);
+	})
+	$(".select").click(function(){
+		var value=$(this).attr("id");
+		window.location.href="?type="+value;
+	})
+
+</script>

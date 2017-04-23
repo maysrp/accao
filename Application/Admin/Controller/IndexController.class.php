@@ -142,6 +142,16 @@ class IndexController extends Controller {
 		}
 		$this->ajaxReturn($re);
 	}
+	public function tag_del(){
+		$tid=I('get.tid');
+		$ba=D('Home/Tag')->tid_del($tid);
+		if($ba){
+			$re['status']=true;
+		}else{
+			$re['status']=false;
+		}
+		$this->ajaxReturn($re);
+	}
 	public function all_post(){
 		$this->login_false();
 		$where['del']=0;
@@ -509,6 +519,32 @@ class IndexController extends Controller {
 		session('user',null);
 		session('admin',null);
 		$this->success("已经登出",U('Admin/Index/login'));
+	}
+	public function recom_list(){
+		$this->login_false();
+		$info=D('Home/Recom')->recom();
+		$count=count($info);
+		$Page= new \Think\Page($count,25);
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('page',$show);
+		$this->assign("info",$list);
+		$this->display();
+
+
+
+	}
+	public function recom_toggle(){
+		$this->login_false();
+		$pid=I('get.pid');
+		$uid=session('user.uid');
+		$re=D('Home/Recom')->recom_toggle($pid,$uid);
+		$this->ajaxReturn($re);
 	}
 	private function is_login(){
 		if(isset($this->session['admin']['level'])){//管理员团队

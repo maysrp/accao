@@ -1,0 +1,50 @@
+	<div class="container">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3>推荐帖子列表</h3>
+			</div>
+			<table class="table">
+				<tr>
+					<th>
+						标题
+					</th>
+					<th>
+						时间
+					</th>
+					<th>
+						操作
+					</th>
+				</tr>		
+				<volist name="info" id="vo">
+					<tr id="{$vo['pid']}">
+						<td class="bhh">
+							<a href="/Admin/Index/view/pid/{$vo['pid']}"><small class="text-danger">帖子ID:{$vo['pid']}</small> {$vo['pid']|pidname}</a>
+						</td>
+						<td>
+							{$vo['time']|date="Y/m/d H:i",###}
+						</td>
+						<td>
+							<span class="glyphicon glyphicon-trash text-danger del_recom" value="{$vo['pid']}"></span>
+						</td>
+					</tr>
+				</volist>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(".del_recom").click(function(){
+			var pid=$(this).attr("value");
+			$.ajax({
+				url:'/Admin/Index/recom_toggle/pid/'+pid,
+				success:function(data){
+					if(data.status){
+						$("#"+pid).remove();
+						mx=Messenger().post("成功:"+data.con+"推荐帖子");
+					}else{
+						alert("失败");
+					}
+				}
+			})
+		})
+	</script>

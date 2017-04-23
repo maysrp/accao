@@ -1,183 +1,181 @@
-<style type="text/css">
-	#all:hover{
-		font-size: 30px;
-		color: #F41211;
-		font-weight:bold;
-	}
-	#video:hover{
-		font-size: 30px;
-		color: #F41211;
-		font-weight:bold;
-	}
-	#post:hover{
-		font-size: 30px;
-		color: #F41211;
-		font-weight:bold;
-	}
-</style>
+{__NOLAYOUT__}
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>YPAYPA!乌拉!乌拉!</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="/static/css/core.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+		<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<style>
+			a:link {
+ 				text-decoration: none;
+			}
+			a:visited {
+ 				text-decoration: none;
+			}
+			a:hover {
+				 text-decoration: none;
+				}
+			a:active {
+			 	text-decoration: none;
+			}
+		</style>
 
-<div id="index" value="<php>echo index</php>"></div>
+	</head>
+	<body>
+		<div class="container-fulid" >
+			<div id="index" value="<php>echo index</php>"></div>
+			<include file="Public/header"/>
+			<div class="container" style="margin-top:-63px; ">
+				<h2 ><b ><a href="/" class="text-danger">首页</a></b> <small ><a href="/Home/Index/sindex/?type=video" class="text-danger">视频</a></small> <small><a href="/Home/Index/sindex/?type=post" class="text-danger">文章</a></small></h2>
 
-
-<div xs="row" class="row">
-
-<div class="col-md-9 col-xs-12" >
-	<div class="row" style="margin: 10px;">
-		<p>
-			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="all">综合</span>
-			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="video">视频</span>
-			<span style="font-size: 30px; margin: 10px;" class="text-muted select" id="post">文章</span>
-		</p>
-		<hr>
-	</div>
-
-	<div class="row">
-		<div class="row" style="margin: 10px;">
-			<volist name="info" id="vo">
-			<div class="row post" value="{$vo['pid']}">
-				<div class="col-md-1 col-xs-2" style="padding:5px;">
-					<div  id="{$vo['pid']}" style="background: #5BB75B;width: 60px;height: 60px; ">
-						<a href="/Home/Index/post/pid/{$vo['pid']}">
-							<h3 class="text-right" style="color: #FFF"><b> {$vo['pid']|comment}</b></h3>
-							<h4 class="text-right" style="color: #FFF"> 评论</h4>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-11 col-xs-10" >
-					<h3 class="bhh">
-						<if condition="$vo['is_video']">
-  							<span class="text-primary glyphicon glyphicon-film" title="视频"></span>
-  						<else/>
-  							<span class="glyphicon glyphicon-book" title="文章"></span>
-  						</if>
-						<a href="/Home/Index/post/pid/{$vo['pid']}" >{$vo['title']}</a>
-					</h3>
-					<p>
-						<small class="text-muted">
-							{$vo['uid']|uid}|发布时间:{$vo['time']|date="Y/m/d H:i",###}|
-							最后修改时间:
-							<if condition="$vo['edit_time']">
-								{$vo['edit_time']|date="Y/m/d H:i",###}
-							<else/>
-								{$vo['time']|date="Y/m/d H:i",###}
-							</if>
-							围观:{$vo['view']}
-							收藏:{$vo['pid']|savepid}
-							评论:{$vo['pid']|comment}
-						</small>
-					</p>
-					<div>
-					<if condition="$vo['image']">
-						<img  class="img-thumbnail" src="{$vo['image']}" width="500px;">
-					</if>
-					</div>
-				</div>
 			</div>
-			<hr>
-			</volist>
 		</div>
-	</div>
-</div>
-<div class="col-md-3 col-xs-12">
-	<div class="row">
-		<h3>新帖</h3>
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-					 	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  	  					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  	  					<li data-target="#carousel-example-generic" data-slide-to="3"></li>
-  	  					<li data-target="#carousel-example-generic" data-slide-to="4"></li>
-				</ol>
-				<div class="carousel-inner" role="listbox">
-					<volist name="nim" id="vo">
-						<if condition="$i eq 1">
-							<div class="item active">
-						<else/>
-							<div class="item">
-						</if>
-     							<img src="{$vo['image']}" alt="{$vo['title']}">
-      							<div class="carousel-caption">
-      								<a href="/Home/Index/post/pid/{$vo['pid']}"><h3 class="bhh">{$vo['title']}</h3></a>
-      							</div>
-    						</div>
-					</volist>
+		<div class="container-fulid" style="background: #FAFAFA">
+			<div class="container">
+				<div class="col-md-5 col-xs-12 " style="padding-top:15px;">
+					
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
+						<ol class="carousel-indicators">
+							 	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+  	  							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  	  							<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  	  							<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<volist name="post_1" id="vo">
+								<if condition="$i eq 1">
+									<div class="item active img-head" style="height:255px">
+								<else/>
+									<div class="item img-head" style="height:255px">
+								</if>
+    	 								<img src="{$vo['image']}" alt="{$vo['title']}"  >
+      									<div class="carousel-caption">
+      										<a class="text-danger"  href="/Home/Index/post/pid/{$vo['pid']}"><h3 class="bhh">{$vo['title']}</h3></a>
+      									</div>
+    								</div>
+							</volist>
+						</div>
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+   		 					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+   	 						<span class="sr-only">Previous</span>
+  						</a>
+	  					<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    						<span class="sr-only">Next</span>
+  						</a>
+					</div>
+
 				</div>
-				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    				<span class="sr-only">Previous</span>
-  				</a>
-  				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    				<span class="sr-only">Next</span>
-  				</a>
+				<div class="col-md-7 col-xs-12">
+
+					<volist name="post_2" id="vo">
+						<div class="col-xs-12 col-sm-4 shx" style="padding-bottom: 10px;" value="z{$vo['pid']}">
+							<div style="background: url({$vo['image']});height: 120px; background-size: cover;opacity: 0.8;">
+								<div id="az{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}" ><h4 style="padding-top: 100px;padding-left:10px;  color: #FFF" class="bhh">{$vo['title']}</h4></a>
+								</div>
+								<div class="hide" style="background: #000;opacity: 0.7" id="bz{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}" style="color: #FFF;" >
+										<h5 style="padding-top: 5px;padding-left:10px;" class="bhh">{$vo['title']}</h5>
+
+										<h5 style="padding-top: 40px;padding-left:10px;" >UP主:{$vo['uid']|uidname}</h5>
+										<h5 style="padding-top: 10px;padding-left:10px; "><span class="glyphicon glyphicon-expand"></span> {$vo['view']} | <span class="glyphicon glyphicon-comment"></span> {$vo['pid']|comment}</h5>
+									</a>
+								</div>
+							</div>
+						</div>
+					</volist>
+
+
+				</div>
+				<div class="col-md-8 col-xs-12 hidden-xs">
+					<div class="row">
+						<h3><a href="/Home/Index/sindex/?type=video">最新视频</a></h3>
+					</div>
+					<div class="row">
+					<volist name="post_3" id="vo">
+						<div class="col-xs-12 col-sm-3 shx" style="padding-bottom: 10px;" value="c{$vo['pid']}">
+							<div style="background: url({$vo['image']});height: 120px; background-size: cover;opacity: 0.8;">
+								<div id="ac{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}" ><h4 style="padding-top: 100px;padding-left:10px;  color: #FFF" class="bhh">{$vo['title']}</h4></a>
+								</div>
+								<div class="hide" style="background: #000;opacity: 0.7" id="bc{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}" style="color: #FFF;" >
+										<h5 style="padding-top: 5px;padding-left:10px;" class="bhh">{$vo['title']}</h5>
+
+										<h5 style="padding-top: 40px;padding-left:10px;" >UP主:{$vo['uid']|uidname}</h5>
+										<h5 style="padding-top: 10px;padding-left:10px; "><span class="glyphicon glyphicon-expand"></span> {$vo['view']} | <span class="glyphicon glyphicon-comment"></span> {$vo['pid']|comment}</h5>
+									</a>
+								</div>
+							</div>
+						</div>
+					</volist>
+					</div>
+
+
+					<hr>
+
+					<div class="row">
+						<h3><a href="/Home/Index/sindex/?type=post">最新文章</a></h3>
+					</div>
+					<div class="row">
+					<volist name="post_4" id="vo">
+						<div class="col-xs-12 col-sm-3 shx" style="padding-bottom: 10px;" value="x{$vo['pid']}">
+							<div style="background: url({$vo['image']});height: 120px; background-size: cover;opacity: 0.8;">
+								<div id="ax{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}" ><h4 style="padding-top: 100px;padding-left:10px;  color: #FFF" class="bhh">{$vo['title']}</h4></a>
+								</div>
+								<div class="hide" style="background: #000;opacity: 0.7"  id="bx{$vo['pid']}">
+									<a href="/Home/Index/post/pid/{$vo['pid']}"  style="color: #FFF;" >
+										<h5 style="padding-top: 5px;padding-left:10px;" class="bhh">{$vo['title']}</h5>
+
+										<h5 style="padding-top: 40px;padding-left:10px;" >UP主:{$vo['uid']|uidname}</h5>
+										<h5 style="padding-top: 10px;padding-left:10px; "><span class="glyphicon glyphicon-expand"></span> {$vo['view']} | <span class="glyphicon glyphicon-comment"></span> {$vo['pid']|comment}</h5>
+									</a>
+								</div>
+							</div>
+						</div>
+					</volist>
+					</div>
+				
+				</div>
+				<div class="col-md-4 col-xs-12">
+					<div class="row">
+						<h3><a href="/Home/Index/sindex/">本周最热门</a></h3>
+					</div>
+					<volist name="post_5" id="vo">
+						<h5 class="bhh text-muted">{$i}.<a href="/Home/Index/post/pid/{$vo['pid']}" class="bhh text-muted">{$vo['title']}</a></h5>
+					</volist>
+
+				</div>
 			</div>
-	</div>
-	<div class="row">
-		<h3>围观热帖</h3>
-		<div class="list-group">
-				<volist name="hot" id="vo">
-					<a href="/Home/Index/post/pid/{$vo['pid']}" class="list-group-item">
-						<h4  class="bhh list-group-item-heading">{$vo['title']}</h4>
-						<small class="list-group-item-text">
-							围观:{$vo['view']}
-							收藏:{$vo['pid']|savepid}
-							评论:{$vo['pid']|comment}
-						</small>
-					</a>
-				</volist>
-
-			</div>
-	</div>	
-	<div class="row">
-		<h3>最新回复</h3>
-		<div class="list-group">
-				<volist name="nic" id="vo">
-					<a href="/Home/Index/post/pid/{$vo['pid']}" class="list-group-item">
-						<h4  class="bhh list-group-item-heading"><span class="text-primary">{$vo['lou']}楼</span><small>{$vo['uid']|uidname} 回复《{$vo['pid']|pidname}》</small></h4>
-						<small class="list-group-item-text ">
-								{$vo['comment']}
-								
-						</small>
-					</a>
-				</volist>
-
-			</div>
-	</div>
-</div>
-</div xs="row">
+		</div>
+	<script type="text/javascript">
+		$(".shx").mouseover(function(){
+			var ex=$(this).attr("value");
+			$("#a"+ex).addClass('hide');
+			$("#b"+ex).removeClass('hide');
+		})
+		$(".shx").mouseleave(function(){
+			var ex=$(this).attr("value");
+			$("#b"+ex).addClass('hide');
+			$("#a"+ex).removeClass('hide');
+		})
 
 
+		var width=document.body.clientWidth;
+		if(width<800){
+			$(".img-head").css("height",'160px');
+		}
 
-<div class="row addd">
-	<?php ad_1() ?>
-</div>
-<div class="row text-center">
-	{$page}
-</div>
-<script type="text/javascript">
-	var col="{$Think.get.type}";
-	if(!col){
-		$("#all").removeClass("text-muted");
-		$("#all").addClass("text-danger");
-		$("#all").css("font-weight","bold");
-	}
-	$("#{$Think.get.type}").removeClass("text-muted");
-	$("#{$Think.get.type}").addClass("text-danger");
-	$("#{$Think.get.type}").css("font-weight","bold");
-	$(".post").mouseover(function(){
-		var pid=$(this).attr("value");
-		$("#"+pid).css("background","#0187C5");
-		$("#"+pid).animate({"margin-left":"-5px"},120);  
-	})
-	$(".post").mouseleave(function(){
-		var pid=$(this).attr("value");
-		$("#"+pid).css("background","#5BB75B");
-		$("#"+pid).animate({"margin-left":"5px"},100);
-	})
-	$(".select").click(function(){
-		var value=$(this).attr("id");
-		window.location.href="?type="+value;
-	})
 
-</script>
+	
+	</script>
+	</body>
+	</html>

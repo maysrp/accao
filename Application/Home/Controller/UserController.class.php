@@ -5,7 +5,7 @@ class UserController extends Controller {
 	private $session;
 	public function __construct(){
 		parent::__construct();
-		$this->session=session('user');
+		$this->session=A('Session')->index();
 	}
 	public function index(){//用户信息
 		$this->login_false();

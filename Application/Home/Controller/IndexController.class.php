@@ -20,6 +20,37 @@ class IndexController extends Controller {
 		echo '已生成Sitemap网站地图到根目录';
     }
     public function index(){
+        $hot=D('Post')->hot('week',20);//热门列表【合】
+        $nim=D('Post')->nim('week',5);//最新图片
+            $rem=D('Recom')->recom('week',6);
+        $recom=$this->recom($rem,'image');//推荐图
+        $video=D('Post')->video(8);//最新视频
+        $novideo=D('Post')->novideo(8);//最新文章
+        $this->assign("post_1",$nim);
+        $this->assign("post_2",$recom);
+        $this->assign("post_3",$video);
+        $this->assign("post_4",$novideo);
+        $this->assign("post_5",$hot);
+        $this->display();
+    }
+    private function recom($info,$type=0){
+        foreach ($info as $key => $value) {
+            $post=D('Home/Post')->pid($value['pid']);
+            if($post){
+                if($type=="image"){
+                    if($post['image']&&$post['is_show']){
+                        $ba[]=$post;
+                    }
+                }elseif($post['is_show']){
+                     $ba[]=$post;
+                }
+               
+            }
+        }
+        return $ba;
+
+    }
+    public function sindex(){
         $type=I('get.type');
         if($type=="video"){
             $where['is_video']=1;
@@ -41,9 +72,9 @@ class IndexController extends Controller {
         }
         $list=array_slice($info, 25*($_GET['p']-1),25);
         $show=$Page->show();
-        $hot=D('Post')->hot('month',10);
-        $nim=D('Post')->nim('month',5);
-        $nic=D('Comment')->nic();
+        $hot=D('Post')->hot('month',10);//最热主题
+        $nim=D('Post')->nim('month',5);//最新图片
+        $nic=D('Comment')->nic();//评论
         $this->assign('hot',$hot);
         $this->assign('nim',$nim);
         $this->assign('nic',$nic);
@@ -89,6 +120,26 @@ class IndexController extends Controller {
         $this->assign('page',$show);
         $this->assign("info",$list);
         $this->display();
+    }
+    public function tag(){
+        $tag=I('get.name');
+        $tag=trim($tag);
+        $info=D('Home/Tag')->tag_name($tag);
+        $count=count($info);
+        $Page= new \Think\Page($count,25);
+        if($_GET['p']<1){
+             $_GET['p']=1;
+        }else{
+               $_GET['p']=(int)$_GET['p'];//
+        }
+        $list=array_slice($info, 25*($_GET['p']-1),25);
+        $show=$Page->show();
+        $this->assign('count',$count);
+        $this->assign('page',$show);
+        $this->assign("info",$list);//模板函数获得内容
+        $this->display();
+        
+
     }
     Public function profile(){
         $uid=I('get.uid')?I('get.uid'):session('user.uid');//可以修改

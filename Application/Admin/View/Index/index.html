@@ -3,24 +3,26 @@
 		<br>
 	</div>
 	<div class="row">
-		<div class="col-md-2" style="padding: 10px;">
+		<div class="col-md-2" style="padding-left: 20px;">
 			<div class="panel panel-default">
 				<div class="panel-heading"><h3>网站管理</h3></div>
 				<ul class="list-group">
-					<li class="list-group-item ckk" value="/Admin/Index/post">发布帖子</li>
-					<li class="list-group-item ckk" value="/Admin/Index/mypost">我的帖子</li>
+					<!-- <li class="list-group-item ckk" value="/Admin/Index/post">发布帖子</li> -->
+					<!-- <li class="list-group-item ckk" value="/Admin/Index/mypost">我的帖子</li> -->
 
 
-					<li class="list-group-item ckk" value="/Admin/Index/comment">评论管理</li>
-					<li class="list-group-item ckk" value="/Admin/Index/post_comment">帖子评论</li>
-					<li class="list-group-item ckk" value="/Admin/Index/user_comment">用户评论</li>
+					<li class="list-group-item list-group-item-success ckk" value="/Admin/Index/comment">评论管理</li>
+					<!-- <li class="list-group-item ckk" value="/Admin/Index/post_comment">帖子评论</li> -->
+					<!-- 	<li class="list-group-item ckk" value="/Admin/Index/user_comment">用户评论</li> -->
+					
+					<li class="list-group-item list-group-item-warning ckk" value="/Admin/Index/recom_list">推荐帖子</li>
 
 					<li class="list-group-item ckk" value="/Admin/Index/user">用户管理</li>
 					
-					<li class="list-group-item ckk" value="/Admin/Index/all_post">审核帖子</li>
+					<li class="list-group-item list-group-item-danger ckk  " value="/Admin/Index/all_post">管理帖子</li>
 					
-					<li class="list-group-item ckk" value="/Admin/Index/danmu">弹幕管理</li>
-					<li class="list-group-item ckk" value="/Admin/Index/user_danmu">用户弹幕</li>
+					<li class="list-group-item list-group-item-info ckk" value="/Admin/Index/danmu">弹幕管理</li>
+					<!-- <li class="list-group-item ckk" value="/Admin/Index/user_danmu">用户弹幕</li> -->
 					<li class="list-group-item ckk" value="/Admin/Index/post_danmu">帖子弹幕</li>
 					<li class="list-group-item ckk" value="/Admin/Index/danmu_fobidden">弹幕屏蔽</li>
 					
@@ -30,11 +32,19 @@
 				</ul>
 			</div>
 		</div>
-		<iframe class="col-md-10 ckk_iframe" id="myiframe" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" height="12000px;" src="/Admin/Index/danmu" ></iframe>
+		<iframe class="col-md-10 ckk_iframe"   id="iframepage" name="iframepage" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"  src="/Admin/Index/danmu"  onLoad="iFrameHeight()"></iframe>
 	</div>
 	<script type="text/javascript">
 		$(".ckk").click(function(){
 			var src=$(this).attr("value");
 			$(".ckk_iframe").attr("src",src);
 		})
+
+		function iFrameHeight() { 
+			var ifm= document.getElementById("iframepage"); 
+			var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument; 
+			if(ifm != null && subWeb != null) { 
+				ifm.height = subWeb.body.scrollHeight; 
+			} 
+		} 
 	</script>

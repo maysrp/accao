@@ -17,6 +17,22 @@ class PostModel extends Model {
 		}
 		return $re;
 	}
+	function video($num=10){
+		$where['is_show']=1;
+		$where['is_video']=1;
+		$where['image']=array('neq','0');
+	 $n=$this->where($where)->order('time desc')->limit($num)->select();
+	 return $n;
+
+	}
+	function novideo($num=10){
+		$where['is_show']=1;
+		$where['is_video']=0;
+		$where['image']=array('neq','0');
+		$where['del']=0;
+		return $this->where($where)->order('time desc')->limit($num)->select();
+
+	}
 	function post_create($info){
 		$add['image']=isset($info['image'])?$info['image']:0;
 		$add['uid']=$info['uid'];
@@ -27,7 +43,9 @@ class PostModel extends Model {
 		$add['video_url']=$info['video_url'];
 		$add['ip']=$info['ip'];
 		$add['is_show']=$info['is_show'];
-		return $this->add($add);
+		$pid=$this->add($add);
+		D('Home/Tag')->tag_done($info['tag'],$pid,$info['uid']);
+		return $pid;
 	}
 	function post_edit($info){
 		$save['image']=isset($info['image'])?$info['image']:0;
@@ -38,6 +56,7 @@ class PostModel extends Model {
 		$save['is_video']=$info['is_video'];
 		$save['video_url']=$info['video_url'];
 		$save['edit_time']=time();
+		D('Home/Tag')->tag_change($info['tag'],$info['pid'],$info['uid']);
 		return $this->save($save);
 	}
 	function post_show($pid){

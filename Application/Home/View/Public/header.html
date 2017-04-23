@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-3 col-xs-12">
-			<h2 ><a href="/">Nyaa动漫</a></h2>
+			<h2 ><b><a href="/" class="text-danger">YPAYPA</a></b></h2>
 		</div>
 		<div class="col-md-4 col-xs-12" style="margin-top:20px; ">
 			<form action="/Home/Index/search" >
@@ -14,12 +14,12 @@
 			</form>
 		</div>
 		<div class="col-md-3 col-md-offset-2 col-xs-12">
-			<a href="/Home/User" class="btn btn-link" title="用户中心 {$Think.session.user.name}"><img src="/Home/User/avatar/uid/{$Think.session.user.uid}" width="70px" class="img-circle"></a>
+			<a href="/Home/User" class="btn btn-link" title="用户中心 {$Think.session.user.name}"><img src="/Home/User/avatar/uid/{$Think.session.user.uid}" width="55px" class="img-rounded"></a>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid show_header_image" style="background-image:url(http://inory.net/images/2017/04/19/ypaypaecdc1.jpg);height:362px;">
+<div class="container-fluid show_header_image hidden-xs" style="background:url(/static/img/y.jpg) no-repeat bottom center;height:280px;background-size:100%;">
 
 </div>
 <script type="text/javascript">
@@ -27,7 +27,12 @@
 		var index=$('#index').attr("value");
 		if(index){
 		}else{
-			$(".show_header_image").hide();
+			$(".show_header_image").remove();
 		}
 	})
+	var width=document.body.clientWidth;
+	if(width<800){
+		$(".show_header_image").remove();
+	}
+
 </script>

@@ -30,6 +30,7 @@ class PostController extends Controller {
 		$info['uid']=session('user.uid');
 		$info['ip']=I('server.REMOTE_ADDR');
 		$info['is_show']=0;
+		$info['tag']=I('post.tag');
 		D('Home/Post')->post_create($info);//跳转加入
 		$this->success("发布成功，等待管理员审核后才能查看！",U("Home/User"));
 	}
@@ -45,6 +46,8 @@ class PostController extends Controller {
 		$info['title']=I('post.title');
 		$info['post']=$_POST['post'];
 		if(!($info['post']&&$info['title'])){
+			$tag=D('Home/Tag')->pid($info['pid']);
+			$re['con']['tag']=implode(' ',$tag);
 			$this->assign("info",$re['con']);//传出修改
 			$this->display('edit_post');
 			return;
@@ -64,6 +67,7 @@ class PostController extends Controller {
 		$info['video_url']=I('post.video_url')?I('post.video_url'):0;
 		$info['ip']=I('server.REMOTE_ADDR');
 		$info['is_show']=0;
+		$info['tag']=I('post.tag');
 		D('Home/Post')->post_edit($info);//跳转加入
 		D('Home/Userpoint')->post($this->session['uid'],0);//编辑文章减分
 		$this->success("修改成功，等待管理员审核后才能查看！",U("Home/User"));
