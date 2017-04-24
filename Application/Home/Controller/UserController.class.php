@@ -189,6 +189,26 @@ class UserController extends Controller {
 		$this->assign("info",$list);
 		$this->display();
 	}
+	public function change_pwd(){
+		$info['oldpw']=I('post.oldpw');
+		$info['newpw']=I('post.newpw');
+		if($info['oldpw']&&$info['newpw']){
+				if($this->session['name']){
+				$info['username']=$this->session['name'];
+				$re=D('Home/uc')->user_update($info);
+			}else{
+				$re['status']=false;
+				$re['con']="请先登入";
+			}
+			if($re['status']){
+				$this->success($re['con']);
+			}else{
+				$this->error($re['con']);			
+			}
+		}else{
+			$this->display();
+		}
+	}
 	private function my_post(){
 		$where['uid']=$this->session['uid'];
 		$where['del']=0;

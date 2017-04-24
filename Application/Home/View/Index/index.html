@@ -19,6 +19,7 @@
 			}
 			a:hover {
 				 text-decoration: none;
+				 color: #FA0000;
 				}
 			a:active {
 			 	text-decoration: none;
@@ -31,7 +32,7 @@
 			<div id="index" value="<php>echo index</php>"></div>
 			<include file="Public/header"/>
 			<div class="container" style="margin-top:-63px; ">
-				<h2 ><b ><a href="/" class="text-danger">首页</a></b> <small ><a href="/Home/Index/sindex/?type=video" class="text-danger">视频</a></small> <small><a href="/Home/Index/sindex/?type=post" class="text-danger">文章</a></small></h2>
+				<h2 ><b ><a href="/" class="text-danger">首页</a></b> <small ><a href="/Home/Index/sindex/?type=video" class="text-muted">视频</a> <a href="/Home/Index/sindex/?type=post" class="text-muted">文章</a></small></h2>
 
 			</div>
 		</div>
@@ -177,5 +178,9 @@
 
 	
 	</script>
+			<div class="container " tx="广告 1号位置">
+				<?php ad_1() ?>
+			</div>
+			<include file="Public/footer"/>
 	</body>
 	</html>

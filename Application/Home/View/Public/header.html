@@ -13,8 +13,12 @@
 			</div>
 			</form>
 		</div>
-		<div class="col-md-3 col-md-offset-2 col-xs-12">
-			<a href="/Home/User" class="btn btn-link" title="用户中心 {$Think.session.user.name}"><img src="/Home/User/avatar/uid/{$Think.session.user.uid}" width="55px" class="img-rounded"></a>
+		<div class="col-md-3 col-md-offset-2 col-xs-12" style="margin-top:20px; ">
+			<if condition="$Think.session.user.uid gt 0">
+				<a href="/Home/User" class="text-muted"><h4> 用户:{$Think.session.user.name}</h4></a>
+			<else/>
+				<a href="/Home/User/login"  class="text-muted"><h4>登入</h4></a>
+			</if>		
 		</div>
 	</div>
 </div>
